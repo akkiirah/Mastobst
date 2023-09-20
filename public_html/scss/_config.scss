@@ -1,2 +1,14 @@
+@import '../fonts/Queensides/_stylesheet';
+
 $clr_main: #292929;
 $clr_second: #efefef;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+    font-family: 'Queensides', Arial, Helvetica, sans-serif;
+}
