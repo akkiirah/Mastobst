@@ -3,12 +3,35 @@
 $clr_main: #292929;
 $clr_second: #efefef;
 
+$font_family: 'Queensides', Arial, Helvetica, sans-serif;
+$font_weight-light: 300;
+$font_weight-normal: 400;
+$font_weight-medium: 500;
+$font_size-xs: 8px;
+$font_size-s: 10px;
+$font_size-m: 12px;
+$font_size-l: 16px;
+$font_size-xl: 20px;
+$font_size-xxl: 32px;
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, p {
-    font-family: 'Queensides', Arial, Helvetica, sans-serif;
+a {
+    color: $clr_second;
+    font-family: $font_family;
+    text-decoration: none;
+    
+    &:visited {
+        text-decoration: none;
+        color: $clr_second;
+    }
+
+
 }
