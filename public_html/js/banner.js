@@ -26,14 +26,17 @@ function bannerFade(_activeImg) {
     if(bannerPlaying) {
         if(oldImage) { bannerTransition(oldImage, 0); }
 
-        oldImage = bannerImages[activeImg%divider];
-    
+        oldImage = bannerImages[activeImg];
+        console.log(bannerImages[_activeImg]);
         bannerTransition(bannerImages[_activeImg], 1);
         setTimeout(bannerCounterChange, 500)
         activeImg++;
     }
-
-    window.setTimeout(function() {bannerFade(activeImg%divider)}, 5000);
+    
+    if(activeImg > bannerImages.length-1) {activeImg = 0}
+        
+    console.log(activeImg);
+    window.setTimeout(function() {bannerFade(activeImg)}, 5000);
 }
 
 bannerStopButton.addEventListener("click", bannerPlayStop);

@@ -26,12 +26,13 @@
             height: 100%;
             object-fit: cover;
             pointer-events: none;
-        }
-
-        img#banner_image-2 {
             position: absolute;
             left: 0;
             top: 0;
+        }
+
+        img.banner_image:first {
+            position: relative;
         }
     }
 
