@@ -1,0 +1,52 @@
+#banner_wrap {
+    height: 100dvh;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background-color: $clr_color_alt;
+    }
+
+    figure.banner {
+        height: 100%;
+
+        img.banner_image {
+            &::selection {
+                background-color: transparent;
+                color: transparent;
+            }
+
+            transition: opacity 2s ease-in-out;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        img#banner_image-2 {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    #banner_stop {
+        z-index: 1;
+        position: absolute;
+        bottom: 3rem;
+        left: 3rem;
+        font-size: $font_size-xl;
+        font-weight: $font_weight-medium;
+        width: 3rem;
+        height: 2.75rem;
+
+        &.banner_paused {
+            background-color: $clr_main;
+        }
+    }
+}

@@ -2,8 +2,14 @@
 
 $clr_main: #292929;
 $clr_second: #efefef;
-$clr_color: red;
-$clr_color_alt: orange;
+
+$clr_color: #8C271E;
+$clr_color-darker: darken($clr_color, 10%);
+$clr_color-lighter: lighten($clr_color, $amount: 10%);
+
+$clr_color_alt: #FF8552;
+$clr_color_alt-darker: darken($clr_color_alt, 10%);
+$clr_color_alt-lighter: lighten($clr_color_alt, $amount: 10%);
 
 $font_family: 'Queensides', Arial, Helvetica, sans-serif;
 $font_weight-light: 300;
@@ -26,6 +32,16 @@ $font_size-xxl: 32px;
     -moz-osx-font-smoothing: grayscale;
 }
 
+::-moz-selection {
+    color: $clr_main;
+    background: $clr_second;
+}
+  
+::selection {
+    color: $clr_main;
+    background: $clr_second;
+}
+
 a {
     color: $clr_second;
     text-decoration: none;
@@ -34,6 +50,26 @@ a {
         text-decoration: none;
         color: $clr_second;
     }
-
-
 }
+
+button {
+    border: none;
+    background-color: $clr_color;
+    color: $clr_second;
+    border-radius: 12px;
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    filter: drop-shadow(0px 0px .25rem $clr_main);
+    transition: background 250ms ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $clr_color-darker;
+    }
+
+    &:active {
+        transition: background 0ms ease;
+        background-color: $clr_main;
+    }
+}
+
