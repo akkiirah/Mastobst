@@ -3,4 +3,13 @@
 }
 main#content {
     padding-inline: 6rem;
+
+    ul {
+
+        li {
+            &::marker {
+                color: $clr_color_alt;
+            }
+        }
+    }
 }
