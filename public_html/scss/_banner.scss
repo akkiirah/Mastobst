@@ -49,4 +49,14 @@
             background-color: $clr_main;
         }
     }
+    #banner_counter {
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        font-size: $font_size-xl;
+        font-weight: $font_weight-medium;
+        filter: drop-shadow(0px 0px .25rem $clr_main);
+        transform: translateX(-50%);
+        color: $clr_second;
+    }    
 }
