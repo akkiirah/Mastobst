@@ -10,6 +10,16 @@
     justify-content: space-between;
     align-items: center;
 
+    transition: padding 250ms ease,
+                width 250ms ease,
+                margin 250ms ease;
+
+    .scroll & {
+        padding-block: 0.25rem;
+        margin: .5rem 0 0 .5rem;
+        width: calc(100% - 1rem);
+    }
+
     #logo{
 
         .logoInner {
@@ -22,6 +32,11 @@
             font-family: $font_family;
             font-weight: $font_weight-medium;
             border: none;
+            transition: font-size 250ms ease;
+
+            .scroll & {
+                font-size: $font_size-xl;
+            }
     
             &::after {
                 content: '';
