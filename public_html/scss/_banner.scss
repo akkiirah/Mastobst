@@ -1,6 +1,7 @@
 #banner_wrap {
     height: 100dvh;
     position: relative;
+    background-color: grey;
 
     &::after {
         content: '';
