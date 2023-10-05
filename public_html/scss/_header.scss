@@ -189,6 +189,14 @@
             .sub_menue {
                 position: relative;
                 padding-block: 2rem;
+
+                &:hover {
+                    &::after {
+                        width: 100%;
+                        transform: translateX(0%);
+                    }
+                }
+
                 &::after {
                     content: '';
                     position: absolute;
@@ -198,6 +206,8 @@
                     left: 0;
                     background-color: $clr_color;
                     transform: translateX(50%);
+                    transition: transform 250ms ease,
+                    width 250ms ease;
                 }
             }
         }
