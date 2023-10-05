@@ -1,13 +1,31 @@
 #banner_wrap {
-    height: 83dvh;
+    height: 32dvh;
     position: relative;
-    top: 9rem;
+    top: 5.5rem;
     border-radius: 30px;
     margin-bottom: 12rem;
-    margin-inline: 1rem ;
+    margin-inline: .5rem;
     background-color: grey;
     border-bottom: 4px solid $clr_color_alt;
     filter: drop-shadow(0px 0px 0.25rem #29292955);
+
+    
+    @media only screen and (min-width: $m) {
+        .startseite & {
+            top: 8rem;
+            height: 85.5dvh !important;  
+            margin-inline: 1rem ;
+        }
+    }
+    @media only screen and (min-width: $l) {
+        .startseite & {
+            top: 9rem;
+            height: 83.5dvh !important;
+        }
+    }
+    .startseite & {
+        height: 90dvh;
+    }
 
     figure.banner {
         height: 100%;

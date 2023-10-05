@@ -1,7 +1,10 @@
 @import '../fonts/Queensides/_stylesheet';
 
 $clr_main: #292929;
+$clr_main_light: lighten($clr_main, $amount: 10%);
+$clr_main_dark: darken($clr_main, 10%);
 $clr_second: #efefef;
+$clr_second_dark: darken($clr_second, 10%);
 
 $clr_color: #8C271E;
 $clr_color-darker: darken($clr_color, 10%);
@@ -22,6 +25,13 @@ $font_size-l: 16px;
 $font_size-xl: 20px;
 $font_size-xxl: 32px;
 
+$xxs: 360px;
+$xs: 480px;
+$s: 560px;
+$m: 768px;
+$l: 1024px;
+$xl: 1280px;
+$xxl: 1500px;
 
 * {
     padding: 0;
@@ -54,7 +64,7 @@ a {
 
 button {
     border: none;
-    background-color: $clr_color;
+    background-color: $clr_main_dark;
     color: $clr_second;
     border-radius: 12px;
     padding-inline: 1rem;
@@ -70,6 +80,16 @@ button {
     &:active {
         transition: background 0ms ease;
         background-color: $clr_main;
+    }
+}
+
+.wrap_center {
+    padding-inline: 1rem;
+    @media only screen and (min-width: $l) {
+        padding-inline: 2rem;
+    }
+    @media only screen and (min-width: $xl) {
+        padding-inline: 4rem;
     }
 }
 
