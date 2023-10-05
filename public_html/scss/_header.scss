@@ -132,21 +132,21 @@
         @media only screen and (min-width: $m) {
             display: none;
         }
-        padding-block: 1.25rem;;
+        padding-block: 1.25rem;
         background-color: #292929b4;
         flex-direction: column;
         gap: 2rem;
         position: absolute;
         right: -.5rem;
         top: -.5rem;
-        height: calc(100dvh - .5rem);
+        height: 100dvh;
         width: calc(100dvw - .5rem);
         align-items: center;
         transition: transform 750ms ease;
         filter: drop-shadow(0px 0px 0.25rem #29292955);
 
         &.mobile_open { transform: translateX(0); }
-        &.mobile_hidden { transform: translateX(100%); }
+        &.mobile_hidden { transform: translateX(105%); }
 
         @media only screen and (min-width: $xs) {
             width: 18rem;
