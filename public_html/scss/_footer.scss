@@ -1,0 +1,20 @@
+footer {
+    background-color: $clr_main;
+    color: $clr_second;
+
+    #footer_wrap {
+        .footer_content{
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+    
+            .footer_content-left {
+    
+            }
+    
+            .footer_content-right {
+                
+            }
+        }
+    }
+}
