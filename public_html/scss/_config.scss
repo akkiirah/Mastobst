@@ -1,9 +1,9 @@
 @import '../fonts/Queensides/_stylesheet';
 @import '../fonts/SF_Pro_Display/_stylesheet';
 
-$clr_main: #292929;
-$clr_main_light: lighten($clr_main, $amount: 10%);
-$clr_main_dark: darken($clr_main, 10%);
+$clr_main: #1b1b1c;
+$clr_main_light: lighten($clr_main, $amount: 4%);
+$clr_main_dark: darken($clr_main, 4%);
 $clr_second: #efefef;
 $clr_second_dark: darken($clr_second, 10%);
 
@@ -22,6 +22,8 @@ $font_size-m: 12px;
 $font_size-l: 16px;
 $font_size-xl: 20px;
 $font_size-xxl: 32px;
+
+$drop_shadow-main: drop-shadow(0px 0px 0.33rem #FF855222);
 
 $xxs: 360px;
 $xs: 480px;
@@ -82,7 +84,7 @@ button {
     border-radius: 12px;
     padding-inline: 1rem;
     padding-block: .5rem;
-    filter: drop-shadow(0px 0px .25rem $clr_main);
+    filter: $drop_shadow-main;
     transition: background 250ms ease;
     cursor: pointer;
 
@@ -94,6 +96,10 @@ button {
         transition: background 0ms ease;
         background-color: $clr_main;
     }
+}
+
+body {
+    background-color: $clr_main_dark;
 }
 
 .wrap_center {

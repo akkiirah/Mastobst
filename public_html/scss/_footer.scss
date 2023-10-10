@@ -1,8 +1,17 @@
 footer {
     background-color: $clr_main;
     color: $clr_second;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    border-radius: 1rem;
+    background-color: $clr_main;
+    filter: $drop_shadow-main;
 
     #footer_wrap {
+        .footer_title {
+            margin-bottom: 1.5rem;
+        }
+        
         .footer_content{
             display: flex;
             gap: 1rem;

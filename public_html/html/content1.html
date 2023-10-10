@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css"/>
 </head>
 <body>
-    <header id="header">
+    <header id="header" class="wrap_center">
         <div class="logo">
             <a href="index.html" class="logo_inner">Mast Obst</a>
         </div>
@@ -18,6 +18,56 @@
             <a href="content3.html" class="sub_menue"> Menüpunkt 3 </a>
             <a href="content4.html" class="sub_menue"> Menüpunkt 4 </a>
         </nav>
-    </header>    
+        <button id="burger_menue">☰</button>
+        <nav id="mobile_menue" class="wrap_center mobile_hidden">
+            <div class="logo">
+                <div class="logo_inner">Mast Obst</div>
+            </div>
+            <button id="mobile_close">X</button>
+            <div class="mobile_menue">
+                <a href="content1.html" class="sub_menue"> Menüpunkt 1 </a>
+                <a href="content2.html" class="sub_menue"> Menüpunkt 2 </a>
+                <a href="content3.html" class="sub_menue"> Menüpunkt 3 </a>
+                <a href="content4.html" class="sub_menue"> Menüpunkt 4 </a>
+            </div>
+        </nav>
+    </header>
+
+    <div id="banner_wrap">
+        <figure class="banner">
+            <img id="banner_image-1" class="banner_image" src="/public_html/img/banner/dummy1.jpg" alt="Dummy Banner">
+            <img id="banner_image-2" style="opacity: 0;" class="banner_image" src="/public_html/img/banner/dummy2.jpg"> 
+        </figure>
+        <button id="banner_stop">II</button>
+        <span id="banner_counter"></span>
+    </div>
+    <main id="content">
+        <h1>Hier steht text!</h1>
+        <ul>
+            <li>Liste Item 1</li>
+            <li>Liste Item 2</li>
+            <li>Liste Item 3</li>
+            <li>Liste Item 4</li>
+            <li>Liste Item 5</li>
+        </ul>
+    </main>
+    <footer>
+        <div id="footer_wrap" class="wrap_center">
+            <h1>Mast Obst</h1>
+            <div class="footer_content">
+                <div class="footer_content-left">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto asperiores dolorum illo neque? Quidem, debitis facere recusandae perspiciatis voluptates similique?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto asperiores dolorum illo neque? Quidem, debitis facere recusandae perspiciatis voluptates similique?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto asperiores dolorum illo neque? Quidem, debitis facere recusandae perspiciatis voluptates similique?</p>
+                </div>
+                <div class="footer_content-right">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto asperiores dolorum illo neque? Quidem, debitis facere recusandae perspiciatis voluptates similique?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto asperiores dolorum illo neque? Quidem, debitis facere recusandae perspiciatis voluptates similique?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto asperiores dolorum illo neque? Quidem, debitis facere recusandae perspiciatis voluptates similique?</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/public_html/js/main.js"></script>  
 </body>
 </html>
