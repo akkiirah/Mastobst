@@ -37,7 +37,7 @@
             transform-origin: center;
             color: $clr_second;
             font-family: $font_family;
-            font-weight: $font_weight-medium;
+            font-weight: 400; 
             border: none;
             transition: font-size 250ms ease;
 
@@ -78,7 +78,7 @@
         .sub_menue {
             color: $clr_second;
             font-family: $font_family;
-            font-weight: $font_weight-medium;
+            font-weight: 400;
             position: relative;
             transition: all 250ms ease;
             padding: 1rem;

@@ -1,4 +1,5 @@
 @import '../fonts/Queensides/_stylesheet';
+@import '../fonts/SF_Pro_Display/_stylesheet';
 
 $clr_main: #292929;
 $clr_main_light: lighten($clr_main, $amount: 10%);
@@ -14,10 +15,7 @@ $clr_color_alt: #FF8552;
 $clr_color_alt-darker: darken($clr_color_alt, 10%);
 $clr_color_alt-lighter: lighten($clr_color_alt, $amount: 10%);
 
-$font_family: 'Queensides', Arial, Helvetica, sans-serif;
-$font_weight-light: 300;
-$font_weight-normal: 400;
-$font_weight-medium: 500;
+$font_family: 'SF Pro Display', Arial, Helvetica, sans-serif;
 $font_size-xs: 8px;
 $font_size-s: 10px;
 $font_size-m: 12px;
