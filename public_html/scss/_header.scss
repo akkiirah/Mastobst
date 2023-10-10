@@ -129,6 +129,12 @@
             background-color: $clr_color;
 
             &:nth-child(2)::before { left: 0 !important; }
+
+            &:hover,
+            &:focus {
+                border: 2px solid transparent;
+                filter: none
+            }
         }
     }
 
