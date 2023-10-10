@@ -62,6 +62,21 @@ a {
     }
 }
 
+h1 {
+    position: relative;
+    margin-bottom: 1rem;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 4rem;
+        height: 3px;
+        bottom: 0px;
+        background-color: $clr_color;
+        transition: width 250ms;
+    }
+}
+
 button {
     border: none;
     background-color: $clr_main_dark;
