@@ -98,6 +98,7 @@
             &:hover,
             &:focus {
                 border: 2px solid $clr_color;
+                filter: $drop_shadow-clr;
             }
 
             &:not(:first-child) {

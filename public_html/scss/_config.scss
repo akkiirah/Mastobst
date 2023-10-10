@@ -6,6 +6,7 @@ $clr_main_light: lighten($clr_main, $amount: 4%);
 $clr_main_dark: darken($clr_main, 4%);
 $clr_second: #efefef;
 $clr_second_dark: darken($clr_second, 10%);
+$clr_second_darker: darken($clr_second, 20%);
 
 $clr_color: #8C271E;
 $clr_color-darker: darken($clr_color, 10%);
@@ -24,6 +25,7 @@ $font_size-xl: 20px;
 $font_size-xxl: 32px;
 
 $drop_shadow-main: drop-shadow(0px 0px 0.33rem #FF855222);
+$drop_shadow-clr: drop-shadow(0px 0px 0.33rem $clr_color);
 
 $xxs: 360px;
 $xs: 480px;
@@ -112,3 +114,23 @@ body {
     }
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $clr_main_light;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $clr_second_dark;
+    border-radius: 6px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $clr_second_darker;
+  }
