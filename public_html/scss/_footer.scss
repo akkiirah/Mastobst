@@ -14,8 +14,14 @@ footer {
         
         .footer_content{
             display: flex;
-            gap: 1rem;
-            justify-content: center;
+            gap: 3rem;
+            justify-content: space-between;
+            flex-direction: column;
+
+            @media only screen and (min-width: $xs) {
+                gap: 4rem; 
+                flex-direction: row;
+            }
     
             .footer_content-left {
     

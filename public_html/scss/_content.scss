@@ -2,15 +2,84 @@
     height: 10rem
 }
 main#content {
-    margin-block: 4rem;
+    margin-top: 14rem;
+    margin-bottom: 8rem;
     padding-inline: 6rem;
     color: $clr_second;
 
-    ul {
+    .main_title {
+        font-size: 56px;
+        margin-bottom: 10rem;
+    }
 
-        li {
-            &::marker {
-                color: $clr_color_alt;
+    .content_wrap {
+        display: flex; 
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        margin-top: -6rem;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+
+    
+        &:nth-of-type(2n) {
+            flex-direction: row;
+
+            .content_container {
+                flex-direction: row; 
+                justify-content: space-between;
+                
+                .content-right {
+                    justify-content: flex-end;
+                    .content_image_wrap {
+                        .content_image {
+                            filter: drop-shadow(1rem .5rem .25rem $clr_main);
+                        }
+                    }
+                }
+            }
+        }
+
+        .content_container {
+            background-color: $clr_main_light;
+            display: flex; 
+            gap: 2rem;
+            width: 45%;
+            border-radius: 25px;
+            padding: 2rem;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            .content-left {
+                width: 33%;
+
+                .content_title {
+                    margin-top: 2rem;
+                    font-size: 3rem; 
+                    margin-bottom: .5rem;
+                }
+                .content_desc {
+                    font-size: 1.25rem;
+                }
+            }
+    
+            .content-right {
+                display: flex;
+                justify-content: flex-start;
+                width: 66%;
+                .content_image_wrap {
+                    max-width: 80%;
+                    height: 20rem;
+    
+                    .content_image {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        filter: drop-shadow(-1rem 0 5rem $clr_main);
+                    }
+                }
             }
         }
     }
