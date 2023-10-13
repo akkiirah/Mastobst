@@ -79,7 +79,7 @@
         left: 50%;
         font-size: $font_size-xl;
         font-weight: 400;
-        box-shadow: $box_shadow-main;
+        filter: $drop_shadow-main;
         transform: translateX(-50%);
         color: $clr_second;
     }    
