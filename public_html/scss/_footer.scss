@@ -4,8 +4,7 @@ footer {
     padding-top: 3rem;
     padding-bottom: 2rem;
     border-radius: 1rem;
-    background-color: $clr_main;
-    filter: $drop_shadow-main;
+    box-shadow: $box_shadow-menues;
 
     #footer_wrap {
         .footer_title {

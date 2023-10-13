@@ -24,8 +24,10 @@ $font_size-l: 16px;
 $font_size-xl: 20px;
 $font_size-xxl: 32px;
 
-$drop_shadow-main: drop-shadow(0px 0px 0.33rem #FF855222);
-$drop_shadow-clr: drop-shadow(0px 0px 0.33rem $clr_color);
+$box_shadow-main: 0 0 3rem .25rem $clr_main; 
+$box_shadow-menues: 0 0 2rem 0rem $clr_main; 
+$box_shadow-clr: 0 0 3rem .25rem $clr_color;
+$drop_shadow-clr: drop-shadow(0px 0px 0.33rem $clr_color); 
 
 $xxs: 360px;
 $xs: 480px;
@@ -67,6 +69,7 @@ a {
 h1 {
     position: relative;
     margin-bottom: 1rem;
+    font-size: 56px;
     &::after {
         content: '';
         display: block;
@@ -86,7 +89,7 @@ button {
     border-radius: 12px;
     padding-inline: 1rem;
     padding-block: .5rem;
-    filter: $drop_shadow-main;
+    box-shadow: $box_shadow-main;
     transition: background 250ms ease;
     cursor: pointer;
 

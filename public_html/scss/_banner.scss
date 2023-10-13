@@ -7,7 +7,15 @@
     margin-inline: .5rem;
     background-color: grey;
     border-bottom: 4px solid $clr_color_alt;
-    filter: drop-shadow(0px 0px 0.33rem #FF85524E);
+    transition: box-shadow 2s ease;
+
+    &[data-banner="1"] {
+        box-shadow: 0 0 1.5rem 0 #ecc0bc;
+    }
+
+    &[data-banner="2"] {
+        box-shadow: 0 0 1.5rem 0 #817c90;
+    }
 
     @media only screen and (min-width: $m) {
         top: 8rem;
@@ -71,7 +79,7 @@
         left: 50%;
         font-size: $font_size-xl;
         font-weight: 400;
-        filter: $drop_shadow-main;
+        box-shadow: $box_shadow-main;
         transform: translateX(-50%);
         color: $clr_second;
     }    

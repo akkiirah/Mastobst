@@ -13,7 +13,7 @@
                 margin 250ms ease,
                 border 250ms ease;
 
-    filter: $drop_shadow-main;
+    box-shadow: $box_shadow-menues;
     z-index: 1;
 
 
@@ -153,7 +153,7 @@
         width: calc(100dvw - .5rem);
         align-items: center;
         transition: transform 750ms ease;
-        filter: $drop_shadow-main;
+        box-shadow: $box_shadow-main; 
 
         &.mobile_open { transform: translateX(0); }
         &.mobile_hidden { transform: translateX(105%); }
