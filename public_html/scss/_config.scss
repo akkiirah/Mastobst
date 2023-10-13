@@ -17,12 +17,12 @@ $clr_color_alt-darker: darken($clr_color_alt, 10%);
 $clr_color_alt-lighter: lighten($clr_color_alt, $amount: 10%);
 
 $font_family: 'SF Pro Display', Arial, Helvetica, sans-serif;
-$font_size-xs: 8px;
-$font_size-s: 10px;
-$font_size-m: 12px;
-$font_size-l: 16px;
-$font_size-xl: 20px;
-$font_size-xxl: 32px;
+$font_size-xs: 12px;
+$font_size-s: 14px;
+$font_size-m: 16px;
+$font_size-l: 24px;
+$font_size-xl: 32px;
+$font_size-xxl: 38px; 
 
 $box_shadow-main: 0 0 3rem .25rem $clr_main; 
 $box_shadow-menues: 0 0 2rem 0rem $clr_main; 
