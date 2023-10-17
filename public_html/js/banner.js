@@ -6,6 +6,7 @@ let bannerPlaying = true;
 let activeImg = 0;
 let divider;
 let oldImage;
+let bannerWrap;
 
 bannerInit();
 
@@ -13,6 +14,8 @@ function bannerInit() {
     bannerImages = document.querySelectorAll('.banner_image');
     bannerStopButton = document.getElementById("banner_stop");
     bannerCounter = document.getElementById('banner_counter');
+    bannerWrap = document.getElementById('banner_wrap');
+    bannerWrap.setAttribute("data-banner", "1");
     divider = bannerFade.length+1;
 
     bannerFade(activeImg);
@@ -58,6 +61,8 @@ function bannerPlayStop() {
 function bannerCounterChange() {
     if(bannerCounterNum > bannerImages.length) {bannerCounterNum = 1}
     bannerCounter.innerHTML = bannerCounterNum  + ' / ' + bannerImages.length;
+    bannerWrap.removeAttribute("data-banner");
+    bannerWrap.setAttribute("data-banner", bannerCounterNum)
     bannerCounterNum++;
 }
 

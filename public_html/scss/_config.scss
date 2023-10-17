@@ -1,10 +1,12 @@
 @import '../fonts/Queensides/_stylesheet';
+@import '../fonts/SF_Pro_Display/_stylesheet';
 
-$clr_main: #292929;
-$clr_main_light: lighten($clr_main, $amount: 10%);
-$clr_main_dark: darken($clr_main, 10%);
+$clr_main: #1b1b1c;
+$clr_main_light: lighten($clr_main, $amount: 4%);
+$clr_main_dark: darken($clr_main, 4%);
 $clr_second: #efefef;
 $clr_second_dark: darken($clr_second, 10%);
+$clr_second_darker: darken($clr_second, 20%);
 
 $clr_color: #8C271E;
 $clr_color-darker: darken($clr_color, 10%);
@@ -14,16 +16,19 @@ $clr_color_alt: #FF8552;
 $clr_color_alt-darker: darken($clr_color_alt, 10%);
 $clr_color_alt-lighter: lighten($clr_color_alt, $amount: 10%);
 
-$font_family: 'Queensides', Arial, Helvetica, sans-serif;
-$font_weight-light: 300;
-$font_weight-normal: 400;
-$font_weight-medium: 500;
-$font_size-xs: 8px;
-$font_size-s: 10px;
-$font_size-m: 12px;
-$font_size-l: 16px;
-$font_size-xl: 20px;
-$font_size-xxl: 32px;
+$font_family: 'SF Pro Display', Arial, Helvetica, sans-serif;
+$font_size-xs: 12px;
+$font_size-s: 14px;
+$font_size-m: 16px;
+$font_size-l: 24px;
+$font_size-xl: 32px;
+$font_size-xxl: 38px; 
+
+$box_shadow-main: 0 0 3rem .25rem $clr_main; 
+$box_shadow-menues: 0 0 2rem 0rem $clr_main; 
+$box_shadow-clr: 0 0 3rem .25rem $clr_color;
+$drop_shadow-clr: drop-shadow(0px 0px 0.33rem $clr_color); 
+$drop_shadow-main: drop-shadow(0px 0px 0.33rem $clr_main); 
 
 $xxs: 360px;
 $xs: 480px;
@@ -62,6 +67,22 @@ a {
     }
 }
 
+h1 {
+    position: relative;
+    margin-bottom: 1rem;
+    font-size: 56px;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 4rem;
+        height: 3px;
+        bottom: 0px;
+        background-color: $clr_color;
+        transition: width 250ms;
+    }
+}
+
 button {
     border: none;
     background-color: $clr_main_dark;
@@ -69,7 +90,7 @@ button {
     border-radius: 12px;
     padding-inline: 1rem;
     padding-block: .5rem;
-    filter: drop-shadow(0px 0px .25rem $clr_main);
+    box-shadow: $box_shadow-main;
     transition: background 250ms ease;
     cursor: pointer;
 
@@ -83,6 +104,10 @@ button {
     }
 }
 
+body {
+    background-color: $clr_main_dark;
+}
+
 .wrap_center {
     padding-inline: 1rem;
     @media only screen and (min-width: $l) {
@@ -93,3 +118,23 @@ button {
     }
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $clr_main_light;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $clr_second_dark;
+    border-radius: 6px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $clr_second_darker;
+  }

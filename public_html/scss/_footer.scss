@@ -1,0 +1,34 @@
+footer {
+    background-color: $clr_main;
+    color: $clr_second;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    border-radius: 1rem;
+    box-shadow: $box_shadow-menues;
+
+    #footer_wrap {
+        .footer_title {
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer_content{
+            display: flex;
+            gap: 3rem;
+            justify-content: space-between;
+            flex-direction: column;
+
+            @media only screen and (min-width: $xs) {
+                gap: 4rem; 
+                flex-direction: row;
+            }
+    
+            .footer_content-left {
+    
+            }
+    
+            .footer_content-right {
+                
+            }
+        }
+    }
+}

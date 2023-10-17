@@ -1,5 +1,5 @@
 #banner_wrap {
-    height: 32dvh;
+    height: 40vh;
     position: relative;
     top: 5.5rem;
     border-radius: 30px;
@@ -7,24 +7,32 @@
     margin-inline: .5rem;
     background-color: grey;
     border-bottom: 4px solid $clr_color_alt;
-    filter: drop-shadow(0px 0px 0.25rem #29292955);
+    transition: box-shadow 2s ease;
 
-    
+    &[data-banner="1"] {
+        box-shadow: 0 0 1.5rem 0 #ecc0bc;
+    }
+
+    &[data-banner="2"] {
+        box-shadow: 0 0 1.5rem 0 #817c90;
+    }
+
     @media only screen and (min-width: $m) {
-        .startseite & {
-            top: 8rem;
-            height: 85.5dvh !important;  
-            margin-inline: 1rem ;
-        }
+        top: 8rem;
+        margin-inline: 1rem ;
     }
     @media only screen and (min-width: $l) {
-        .startseite & {
-            top: 9rem;
-            height: 83.5dvh !important;
-        }
+        top: 9rem;
+    }
+    
+    @media only screen and (min-width: $m) {
+        .startseite & { height: 85.5vh !important; }
+    }
+    @media only screen and (min-width: $l) {
+        .startseite & { height: 83.5vh !important; }
     }
     .startseite & {
-        height: 90dvh;
+        height: 90vh;
     }
 
     figure.banner {
@@ -56,8 +64,8 @@
         position: absolute;
         bottom: 3rem;
         left: 3rem;
-        font-size: $font_size-xl;
-        font-weight: $font_weight-medium;
+        font-size: $font_size-l;
+        font-weight: 400; 
         width: 3rem;
         height: 2.75rem;
 
@@ -70,8 +78,8 @@
         bottom: 3rem;
         left: 50%;
         font-size: $font_size-xl;
-        font-weight: $font_weight-medium;
-        filter: drop-shadow(0px 0px .25rem $clr_main);
+        font-weight: 400;
+        filter: $drop_shadow-main;
         transform: translateX(-50%);
         color: $clr_second;
     }    
