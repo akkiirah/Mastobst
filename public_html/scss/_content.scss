@@ -55,14 +55,25 @@ main#content {
 
             .content-left {
                 width: 33%;
+                padding-block: 2rem;
+                display: flex;
+                flex-direction: column;
 
                 .content_title {
-                    margin-top: 2rem;
                     font-size: 3rem; 
                     margin-bottom: .5rem;
                 }
                 .content_desc {
                     font-size: 1.25rem;
+                    margin-bottom: auto;
+                }
+                .content_learn_more {
+                    width: fit-content;
+                    background-color: $clr_color;
+
+                    &:hover {
+                        background-color: $clr_main;
+                    }
                 }
             }
     
