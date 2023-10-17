@@ -1,6 +1,7 @@
 #nav_content_divider {
     height: 10rem
 }
+
 main#content {
     margin-top: 14rem;
     margin-bottom: 8rem;
@@ -95,7 +96,7 @@ main#content {
             }
         }
     }
-    .content_view_all {
+    .content_view_all {  
         margin-inline: auto;
         background-color: $clr_color;
         display: block;
