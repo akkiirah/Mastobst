@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mast Obst: Manar</title>
+    <title>Mast Obst: Über Uns</title>
     <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+
+
+
 </head>
 <body>
     <header id="header">
@@ -18,7 +21,83 @@
             <div class="sub_menue"> Menüpunkt 3 </div>
             <a href="content4.html" class="sub_menue"> Menüpunkt 4 </a>
         </nav>
-    </header> 
-    <script src="/public_html/js/main.js"></script>    
+    </header>
+
+    <main id="content">
+        <h1 class="main_title">Über Uns</h1>
+        <div class="content_wrap">
+            <div class="content_container">
+                <div class="content-left">
+                    <h2 class="content_title">Unsere Geschichte</h2>
+                    <p class="content_desc">Erfahren Sie mehr über unsere Unternehmensgeschichte und wie wir zu einem führenden Anbieter von Obstprodukten geworden sind.</p>
+                    <button class="content_learn_more">Mehr erfahren</button>
+                    <p id="history" class="hidden">Unsere Geschichte begann vor vielen Jahren...</p>
+                    <!--hidden text mit klick jS-->
+                </div>
+                <div class="content-right">
+                    <!-- Bild für "Unsere Geschichte" -->
+                    <img class="content_image" src="/path/to/unsere_geschichte.jpg" alt="Unsere Geschichte">
+                </div>
+            </div>
+        </div>
+
+        <div class="content_wrap">
+            <div class="content_container">
+                <div class="content-left">
+                    <h2 class="content_title">Unsere Mission</h2>
+                    <p class="content_desc">Erfahren Sie mehr über unsere Mission, hochwertige Obstprodukte anzubieten und unsere Kunden zufrieden zu stellen.</p>
+                    <button class="content_learn_more">Mehr erfahren</button>
+                </div>
+                <div class "content-right">
+                    <!-- Bild für "Unsere Mission" -->
+                    <img class="content_image" src="/path/to/unsere_mission.jpg" alt="Unsere Mission">
+                </div>
+            </div>
+        </div>
+
+        <div class="content_wrap">
+            <div class="content_container">
+                <div class="content-left">
+                    <h2 class="content_title">Versandbedingungen</h2>
+                    <p class="content_desc">Erfahren Sie mehr über unsere Versandbedingungen und wie wir sicherstellen, dass Ihre Bestellungen pünktlich und in bestem Zustand bei Ihnen ankommen.</p>
+                    <button class="content_learn_more">Mehr erfahren</button>
+                </div>
+                <div class="content-right">
+                    <!-- Bild für "Versandbedingungen" -->
+                    <img class="content_image" src="/path/to/versandbedingungen.jpg" alt="Versandbedingungen">
+                </div>
+            </div>
+        </div>
+
+        <button class="content_view_all">Alle ansehen</button>
+    </main>
+
+    <footer>
+     <div>  <!-- Fuß-Bereich -->
+        <p>Kontaktinformation:</p>
+         <p>Olivia Metz</p>
+         <p>Telefon: +49 123 456 789</p>
+        <p>E-Mail: olivia.metz@mastobst.de</p>
+        <p>Adresse: Musterstraße 123, 12345 Musterstadt</p>
+     </div>
+     <div id="map"></div> <!-- Hier wird die Google Maps-Karte angezeigt -->
+    </footer>
+
+<script>
+    function toggleText(id) {
+        var element = document.getElementById(id);
+        if (element.style.display === "none" || element.style.display === "") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }
+</script>
+<script src="/public_html/js/main.js"> </script>
+
+    <!--Google Maps-API-Code hier-->
+
+
+
 </body>
 </html>
