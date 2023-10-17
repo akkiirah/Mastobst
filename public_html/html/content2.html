@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mast Obst: Steven</title>
     <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+
+    <style>
+        body 
+        {
+            color: white;
+        }
+    </style>
+
 </head>
 <body>
     <header id="header">
@@ -29,7 +37,7 @@
         <span id="banner_counter"></span>
     </div> 
 
-    <h1>Hallo, ich bin eine Banane</h1> 
+    <h1>Als Neukunde anmelden</h1> 
 
     <center>
         <form>
@@ -51,23 +59,28 @@
                 <br>
                 <br>
 
-                <label for="birthdate">Geburtstag</label>
+                <label for="mail">E-Mail Adresse</label>
+                <input id="mail" name="email" type="email" class="fields">
+
+                <br>
+                <br>
+
+                <label for="birthdate">Geburtsdatum</label>
                 <input id="birthdate" name="geburtstag" type="date" class="fields">
 
                 <br>
                 <br>
 
-                <label for="rente">auf die staatliche Rente angewiesen</label>
-                <input id="rente" name="renten" type="radio" class="radio">
+                <label for="news">Ich wünsche regelmäßig über Neuigkeiten per E-Mail informiert zu werden</label>
+                <input id="news" name="newsletter" type="checkbox" class="check">
 
                 <br>
                 <br>
 
-                <span  class="fields">Beschäftigungsverhältnis</span>
+                <span  class="fields">Kundentyp</span>
                 <select  class="fields">
-                    <option>Angestellt</option>
-                    <option>Selbstständig</option>
-                    <option>Hoffnungslos verloren</option>
+                    <option>Privatkunde</option>
+                    <option>Firmenkunde</option>
                 </select>
 
                 <br>
