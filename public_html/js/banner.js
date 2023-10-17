@@ -26,6 +26,7 @@ function bannerTransition(banner, num) {
 }
 
 function bannerFade(_activeImg) {
+    console.log("habs versucht");
     if(bannerPlaying) {
         if(oldImage) { bannerTransition(oldImage, 0); }
 
@@ -65,70 +66,6 @@ function bannerCounterChange() {
     bannerWrap.setAttribute("data-banner", bannerCounterNum)
     bannerCounterNum++;
 }
-
-/*
-
-let bannerImages;
-let bannerImagesLength;
-let bannerStopButton;
-let bannerCounter;
-let bannerPlaying = true;
-let activeImg = 0;
-let divider;
-let oldImage;
-
-bannerInit();
-
-function bannerInit() {
-    bannerImages = document.querySelectorAll('.banner_image');
-    bannerStopButton = document.getElementById('banner_stop');
-    bannerCounter = document.getElementById('banner_counter');
-    bannerImagesLength = bannerImages.length;
-    divider = bannerImages.length+1;
-
-    bannerFade(activeImg);
-}
-
-function bannerTransition(banner, num) {
-    banner.style.opacity = num;
-}
-
-function bannerFade(_activeImg) {
-    if(bannerPlaying) {
-        if(oldImage) { bannerTransition(oldImage, 0); }
-
-        oldImage = bannerImages[activeImg%divider];
-    
-        bannerTransition(bannerImages[_activeImg], 1);
-        setTimeout(function() {bannerCounterChange(activeImg%divider)}, 500);
-        activeImg++;
-    }
-
-    window.setTimeout(function() {bannerFade(activeImg%divider)}, 1000);
-}
-
-bannerStopButton.addEventListener("click", bannerPlayStop);
-
-function bannerPlayStop() {
-    switch (bannerPlaying) {
-        case false:
-            bannerPlaying = true;
-            bannerStopButton.innerHTML = "II";
-            bannerStopButton.classList.remove('banner_paused');
-            break;
-        case true:
-            bannerPlaying = false;
-            bannerStopButton.innerHTML = "▷";
-            bannerStopButton.classList.add('banner_paused');
-            break;
-    }
-}
-
-*/
-
-
-
-
 
 
 

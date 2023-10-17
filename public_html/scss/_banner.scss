@@ -10,11 +10,11 @@
     transition: box-shadow 2s ease;
 
     &[data-banner="1"] {
-        box-shadow: 0 0 1.5rem 0 #ecc0bc;
+        box-shadow: 0 0 .75rem 0 #ecc0bc;
     }
 
     &[data-banner="2"] {
-        box-shadow: 0 0 1.5rem 0 #817c90;
+        box-shadow: 0 0 .75rem 0 #817c90;
     }
 
     @media only screen and (min-width: $m) {

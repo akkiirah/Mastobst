@@ -128,7 +128,9 @@
             color: $clr_second;
             font-family: $font_family;
             text-decoration: none;
-            transition: transform 250ms ease;
+            transition: transform 250ms ease,
+                        border 250ms ease,
+                        font-size 250ms ease;
             border: 2px solid transparent;
             padding: 1rem;
             padding-inline: 2rem;

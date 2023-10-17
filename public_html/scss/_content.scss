@@ -17,7 +17,12 @@ main#content {
         display: flex; 
         justify-content: flex-end;
         flex-direction: row-reverse;
-        margin-top: -6rem;
+        margin-top: 4rem;
+
+        
+        .startseite & {
+            margin-top: -6rem;
+        }
 
         &:first-child {
             margin-top: 0;
@@ -47,18 +52,26 @@ main#content {
             background-color: $clr_main_light;
             display: flex; 
             gap: 2rem;
-            width: 45%;
+            width: 80%;
             border-radius: 25px;
             padding: 2rem;
             flex-direction: row-reverse;
             justify-content: space-between;
-            box-shadow: 0 0 3rem 1px rgba(37,37,38,0.75); 
+            box-shadow: 0 0 1rem 1px rgba(37,37,38,0.75); 
+
+            .startseite & {
+                width: 45%;
+            }
 
             .content-left {
-                width: 33%;
+                width: 66%;
                 padding-block: 2rem;
                 display: flex;
                 flex-direction: column;
+
+                .startseite & {
+                    width: 33%;
+                }
 
                 .content_title {
                     font-size: 3rem; 
@@ -72,7 +85,11 @@ main#content {
                     width: fit-content;
                     background-color: $clr_color;
 
-                    &:hover {
+                    &:hover,
+                    &:focus {
+                        background-color: $clr_color-darker;
+                    }
+                    &:active {
                         background-color: $clr_main;
                     }
                 }
@@ -81,7 +98,12 @@ main#content {
             .content-right {
                 display: flex;
                 justify-content: flex-start;
-                width: 66%;
+                width: 33%;
+
+                .startseite & {
+                    width: 66%;
+                }
+
                 .content_image_wrap {
                     max-width: 80%;
                     height: 20rem;
@@ -104,5 +126,12 @@ main#content {
         font-size: $font_size-l;
         padding-inline: 2rem;
         padding-block: 1rem;
+        &:hover,
+        &:focus {
+            background-color: $clr_color-darker;
+        }
+        &:active {
+            background-color: $clr_main;
+        }
     }
 }

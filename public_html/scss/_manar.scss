@@ -1,5 +1,13 @@
-
+// Generelle Styles
 footer {
     padding: 20px 0;
     text-align: center;
+}
+// Seitenspezifische Styles
+.manar {
+    #history {
+        opacity: 0;
+        margin-top: 2rem;
+        transition: opacity 250ms ease;
+    }
 }

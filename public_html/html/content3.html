@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mast Obst: Über Uns</title>
     <link rel="stylesheet" type="text/css" href="../css/main.css"/>
-
-
-
 </head>
-<body>
-    <header id="header">
+<body class="manar">
+    <header id="header" class="wrap_center">
         <div class="logo">
             <a href="index.html" class="logo_inner">Mast Obst</a>
         </div>
@@ -21,7 +18,28 @@
             <div class="sub_menue"> Menüpunkt 3 </div>
             <a href="content4.html" class="sub_menue"> Menüpunkt 4 </a>
         </nav>
+        <button id="burger_menue">☰</button>
+        <nav id="mobile_menue" class="wrap_center mobile_hidden">
+            <div class="logo">
+                <div class="logo_inner">Mast Obst</div>
+            </div>
+            <button id="mobile_close">X</button>
+            <div class="mobile_menue">
+                <a href="content1.html" class="sub_menue"> Menüpunkt 1 </a>
+                <a href="content2.html" class="sub_menue"> Menüpunkt 2 </a>
+                <a href="content3.html" class="sub_menue"> Menüpunkt 3 </a>
+                <a href="content4.html" class="sub_menue"> Menüpunkt 4 </a>
+            </div>
+        </nav>
     </header>
+    <div id="banner_wrap">
+        <figure class="banner">
+            <img id="banner_image-1" class="banner_image" src="/public_html/img/banner/dummy1.jpg" alt="Dummy Banner">
+            <img id="banner_image-2" style="opacity: 0;" class="banner_image" src="/public_html/img/banner/dummy2.jpg"> 
+        </figure>
+        <button id="banner_stop">II</button>
+        <span id="banner_counter"></span>
+    </div>
 
     <main id="content">
         <h1 class="main_title">Über Uns</h1>
@@ -29,14 +47,16 @@
             <div class="content_container">
                 <div class="content-left">
                     <h2 class="content_title">Unsere Geschichte</h2>
-                    <p class="content_desc">Erfahren Sie mehr über unsere Unternehmensgeschichte und wie wir zu einem führenden Anbieter von Obstprodukten geworden sind.</p>
-                    <button class="content_learn_more">Mehr erfahren</button>
+                    <p class="content_desc"> Erfahren Sie mehr über unsere Unternehmensgeschichte und wie wir zu einem führenden Anbieter von Obstprodukten geworden sind.</p>
+                    <button class="content_learn_more" onclick="toggleText()">Mehr erfahren</button>
                     <p id="history" class="hidden">Unsere Geschichte begann vor vielen Jahren...</p>
                     <!--hidden text mit klick jS-->
                 </div>
                 <div class="content-right">
                     <!-- Bild für "Unsere Geschichte" -->
-                    <img class="content_image" src="/path/to/unsere_geschichte.jpg" alt="Unsere Geschichte">
+                    <div class="content_image_wrap">
+                        <img class="content_image" src="/path/to/unsere_geschichte.jpg" alt="Unsere Geschichte">
+                    </div>
                 </div>
             </div>
         </div>
@@ -48,9 +68,11 @@
                     <p class="content_desc">Erfahren Sie mehr über unsere Mission, hochwertige Obstprodukte anzubieten und unsere Kunden zufrieden zu stellen.</p>
                     <button class="content_learn_more">Mehr erfahren</button>
                 </div>
-                <div class "content-right">
+                <div class="content-right">
                     <!-- Bild für "Unsere Mission" -->
-                    <img class="content_image" src="/path/to/unsere_mission.jpg" alt="Unsere Mission">
+                    <div class="content_image_wrap">
+                        <img class="content_image" src="/public_html/img/obst/banana.png" alt="Unsere Mission">
+                    </div>
                 </div>
             </div>
         </div>
@@ -64,7 +86,9 @@
                 </div>
                 <div class="content-right">
                     <!-- Bild für "Versandbedingungen" -->
-                    <img class="content_image" src="/path/to/versandbedingungen.jpg" alt="Versandbedingungen">
+                    <div class="content_image_wrap">
+                        <img class="content_image" src="/path/to/versandbedingungen.jpg" alt="Versandbedingungen">
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,13 +108,15 @@
     </footer>
 
 <script>
-    function toggleText(id) {
-        var element = document.getElementById(id);
-        if (element.style.display === "none" || element.style.display === "") {
-            element.style.display = "block";
+
+    function toggleText() {
+        var element = document.getElementById('history');
+        if (element.style.opacity != "1") {
+            element.style.opacity = "1";
         } else {
-            element.style.display = "none";
+            element.style.opacity = "0";
         }
+        console.log(element.style.opacity);  
     }
 </script>
 <script src="/public_html/js/main.js"> </script>
