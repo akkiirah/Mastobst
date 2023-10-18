@@ -11,3 +11,21 @@ footer {
         transition: opacity 250ms ease;
     }
 }
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1{
+    color: #ffffff;
+    
+}
+
+iframe {
+    width: 80%;
+    height: 500px;
+    filter: invert(100%);
+}
