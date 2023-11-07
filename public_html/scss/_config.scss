@@ -118,6 +118,24 @@ body {
     }
 }
 
+.icon {
+    padding-left: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: left center;
+    &.email {
+        background-image: url('../img/icon/mail.png'); 
+    }
+
+    &.phone {
+        background-image: url('../img/icon/anruf.png'); 
+    }
+
+    &.fax {
+        background-image: url('../img/icon/fax.png'); 
+    }
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 12px;
