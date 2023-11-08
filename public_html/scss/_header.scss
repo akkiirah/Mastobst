@@ -31,43 +31,25 @@
     }
 
     .logo{
-
-        .logo_inner {
-            padding: 1rem;
-            display: block;
-            color: $clr_main; 
-            font-size: $font_size-xl;
-            transform-origin: center;
-            color: $clr_second;
-            font-family: $font_family;
-            font-weight: 800; 
-            border: none;
-            transition: font-size 250ms ease;
-
-            .scroll & {
-                font-size: $font_size-xl;
-            }
-
-            @media only screen and (min-width: $l) {
-                font-size: $font_size-xxl;
-            }
-    
-            &::after {
-                content: '';
-                display: block;
-                width: 40px;
-                height: 3px;
-                background-color: $clr_color;
-                transition: width 250ms;
-            }
+        max-width: 8.5rem;
+        max-height: 4rem;
+        transition: max-width 250ms ease;
+        .scroll & {
+            max-width: 4.5rem;
         }
 
-        a.logo_inner {
-            &:hover,
-            &:focus {
-                &::after {
-                    width: 100%;
-                }
+        .logo_inner {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 250ms ease;
+
+        }
+
+        > a {
+            .logo_inner:hover,
+            .logo_inner:focus {
+                transform: scale(1.1);
             }
         }
     }
