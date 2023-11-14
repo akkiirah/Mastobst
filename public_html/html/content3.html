@@ -36,8 +36,8 @@
     </header>
     <div id="banner_wrap">
         <figure class="banner">
-            <img id="banner_image-1" class="banner_image" src="/public_html/img/banner/dummy1.jpg" alt="Dummy Banner">
-            <img id="banner_image-2" style="opacity: 0;" class="banner_image" src="/public_html/img/banner/dummy2.jpg"> 
+            <img id="banner_image-1" class="banner_image" src="/public_html/img/banner/alleksana1.jpg" alt="Dummy Banner">
+            <img id="banner_image-2" style="opacity: 0;" class="banner_image" src="/public_html/img/banner/alleksana.jpg"> 
         </figure>
         <button id="banner_stop">II</button>
         <span id="banner_counter"></span>
@@ -97,25 +97,65 @@
 
         <button class="content_view_all">Alle ansehen</button>
     </main>
+
     <div class="container">
         <h1> unsere Standort</h1> <!--Google Maps-API-Code hier-->
         <iframe src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2612.205257783309!2d9.736463041311938!3d49.10174097148545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4798506c06f85091%3A0x1805be1c80527a43!2sGewerbliche%20Schule!5e0!3m2!1sde!2sde!4v1697568903834!5m2!1sde!2sde"
          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">"</iframe>
     </div>
 
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RwCu0YyCoYo?si=77fhGnQ6HuzBGZlz&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    
+   <!-- kunden Bewertung -->
+    <div class="customer-reviews">
+        <div class="customer-review">
+            <img class="customer-image" src="/public_html/img/obst/Lisa.webp" alt="Customer 1">
+            <div class="customer-info">
+                <div class="customer-name">Lisa</div>
+                <div class="customer-feedback">Eure Mastobst-Box war ein kulinarisches Erlebnis! Die Früchte waren so frisch und aromatisch. Besonders die Ananas und Beeren haben meinen Gaumen verzaubert. Danke für diese Geschmacksexplosion!</div>
+            </div>
+        </div>
+        <div class="customer-review">
+            <img class="customer-image" src="/public_html/img/obst/Markus.webp" alt="Customer 2">
+            <div class="customer-info">
+                <div class="customer-name">Markus</div>
+                <div class="customer-feedback">Euer Mastobst ist der perfekte Snack! Die knackigen Äpfel und saftigen Trauben waren ein Genuss. Die Lieferung war schnell, und die Auswahl hat meine Erwartungen übertroffen. Weiter so!</div>
+            </div>
+        </div>
+        <div class="customer-review">
+            <img class="customer-image" src="/public_html/img/obst/Sophie.webp" alt="Customer 3">
+            <div class="customer-info">
+                <div class="customer-name">Sophie</div>
+                <div class="customer-feedback">Ich bin sprachlos! Eure obst hat meine Geschmacksknospen verführt. Die Vielfalt an exotischen Früchten war beeindruckend. Mango, Papaya und Kiwi – ein Traum! Danke für diese fruchtige Erfahrung!</div>
+            </div>
+        </div>
+    </div>
+    
+    
+ 
     <footer>
-     <div>  <!-- Fuß-Bereich -->
-        <p>Kontaktinformation:</p>
-         <p>Olivia Metz</p>
-         <p>Telefon: +49 123 456 789</p>
-        <p>E-Mail: olivia.metz@mastobst.de</p>
-        <p>Adresse: Max-Eyth-Straße 9, 74523 Schwäbisch Hall</p>
-     </div>
+        <div id="footer_wrap" class="wrap_center">
+            <div class="footer_content"> 
+                <div class="footer_content-left">
+                    <h2 class="footer_title">Kontakt</h2>
+                    <span><b>Mast Obst GmbH AG Inc.</b></span>
+                    <span>Max-Eyth-Straße 9</span>
+                    <span>74523 Schwäbisch Hall</span>
+                    <span><span class="icon phone"></span>01575 842945-0</span>
+                    <span><span class="icon fax"></span>01575 842945-20</span>
+                    <a href="mailto:tobias.simon02@gmail.com" ><span class="icon email"></span>E-Mail schreiben</a>
+                </div>
    
     </footer>
 
-<script>
+    
+        
 
+
+
+<script>
     function toggleText() {
         var element = document.getElementById('history');
         if (element.style.opacity != "1") {

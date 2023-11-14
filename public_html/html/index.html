@@ -34,9 +34,9 @@
 
     <div id="banner_wrap">
         <figure class="banner">
-            <img id="banner_image-1" class="banner_image" src="/public_html/img/banner/dummy1.jpg" alt="Dummy Banner" />
-            <img id="banner_image-2" style="opacity: 0;" class="banner_image" src="/public_html/img/banner/startseite/pexels-jane-doan-1132040.jpg" /> 
-            <img id="banner_image-3" style="opacity: 0;" class="banner_image" src="/public_html/img/banner/dummy2.jpg" />  
+            <img id="banner_image-1" class="banner_image" src="/public_html/img/banner/pexels-ella-olsson.jpg" alt="Dummy Banner" />
+            <img id="banner_image-2" style="opacity: 0;" class="banner_image" src="/public_html/img/banner/pexels-ella-olsson1.jpg" /> 
+            <img id="banner_image-3" style="opacity: 0;" class="banner_image" src="/public_html/img/banner/pexels-ella-olsson2.jpg" />  
         </figure>
         <button id="banner_stop">II</button>
         <span id="banner_counter"></span>
@@ -48,7 +48,7 @@
                 <div class="content-left">
                     <h2 class="content_title">Bananen</h2>
                     <span class="content_desc">sind krumm.</span>
-                    <button class="content_learn_more">Mehr erfahren</button>
+                    <button class="content_learn_more" onclick="redirectToPage('content1.html')">Mehr erfahren</button> 
                 </div>
                 <div class="content-right">
                     <div class="content_image_wrap">
@@ -62,7 +62,7 @@
                 <div class="content-left">
                     <h2 class="content_title">Kokosnüsse</h2>
                     <span class="content_desc">Keine Ahnung, was soll hier stehen?</span>
-                    <button class="content_learn_more">Mehr erfahren</button>
+                    <button class="content_learn_more" onclick="redirectToPage('content1.html')">Mehr erfahren</button>
                 </div>
                 <div class="content-right">
                     <div class="content_image_wrap">
@@ -76,7 +76,7 @@
                 <div class="content-left">
                     <h2 class="content_title">Melonen</h2>
                     <span class="content_desc">Menschen, die denken sie seien männlich hassen diesen Trick.</span>
-                    <button class="content_learn_more">Mehr erfahren</button>
+                    <button class="content_learn_more" onclick="redirectToPage('content1.html')">Mehr erfahren</button>
                 </div>
                 <div class="content-right">
                     <div class="content_image_wrap">
@@ -90,7 +90,7 @@
                 <div class="content-left">
                     <h2 class="content_title">Äpfel</h2>
                     <span class="content_desc">Sehr teure Mobilgeräte.</span>
-                    <button class="content_learn_more">Mehr erfahren</button>
+                    <button class="content_learn_more" onclick="redirectToPage('content1.html')">Mehr erfahren</button>
                 </div>
                 <div class="content-right">
                     <div class="content_image_wrap">
@@ -134,8 +134,15 @@
                 </div>
             </div>
             <div id="toplink">I</div>
+           
+            
         </div>
     </footer>
     <script src="/public_html/js/main.js"></script>
+    <script>
+         function redirectToPage(page) {
+         window.location.href = page; }
+    </script>
+    
 </body>
 </html>
