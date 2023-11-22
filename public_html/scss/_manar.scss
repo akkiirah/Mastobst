@@ -20,8 +20,11 @@
 .how-it-works {
     display: grid;
     grid-template-columns: 1fr;
+    justify-content: center;
     align-items: center;
     text-align: center;
+    justify-items: center;
+    
 }
 
 .step {
@@ -49,23 +52,22 @@
 
 /* Bilder */
 .round-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 80px;
+    height: 80px;
     margin-right: 15px;
-    
+    filter: invert(100%);
 }
 
 User
 .video {
-    
+    border-radius: 20px;
     width: 100%;
     height: 50vh;
     display: flex;
-    align-items: center;
+    color: #ffffff;
+    align-items: center; 
     justify-content: center;
     flex-direction: column; 
-    color: #ffffff; 
    
 }
 
