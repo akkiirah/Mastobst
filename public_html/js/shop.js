@@ -20,17 +20,47 @@ function moveItems() {
 }
 
 function addToCart(item, button) {
-    shopCartContainer.appendChild(item); 
-    button.innerHTML = "- entfernen";
+    item.style.transform = "scale(1.15)";
+    window.setTimeout(function() {
+        item.style.transform = "scale(0)";
+    }, 100);
 
-    checkRemainingItems();
+    window.setTimeout(function() {
+        shopCartContainer.appendChild(item); 
+        button.innerHTML = "- entfernen";
+        checkRemainingItems();
+    }, 350);
+
+    window.setTimeout(function() {
+        item.style.transform = "scale(1.15)";
+        item.style.opacity = "1";
+    }, 450);
+
+    window.setTimeout(function() {
+        window.setTimeout(function() {item.style.transform = "scale(1)";}, 100);
+    }, 550);
 }
 
 function removeFromCart(item, button) {
-    shopItemsContainer.appendChild(item); 
-    button.innerHTML = "+ hinzufügen";
+    item.style.transform = "scale(1.15)";
+    window.setTimeout(function() {
+        item.style.transform = "scale(0)";
+    }, 100);
 
-    checkRemainingItems();
+    window.setTimeout(function() {
+        shopItemsContainer.appendChild(item); 
+        button.innerHTML = "+ hinzufügen";
+        checkRemainingItems();
+    }, 350);
+
+    window.setTimeout(function() {
+        item.style.transform = "scale(1.15)";
+        item.style.opacity = "1";
+    }, 450);
+
+    window.setTimeout(function() {
+        window.setTimeout(function() {item.style.transform = "scale(1)";}, 100);
+    }, 550);
 }
 
 function checkRemainingItems() {
