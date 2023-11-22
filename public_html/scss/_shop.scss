@@ -21,6 +21,7 @@
         padding: .5rem;
         background-color: $clr_main;
         border-radius: .75rem;
+        transition: opacity 250ms ease, transform 250ms ease-in-out; 
 
         .shop_item-title {
             text-align: center;
