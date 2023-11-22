@@ -7,7 +7,8 @@
     <title>Mast Obst: Steven</title>
     <link rel="stylesheet" type="text/css" href="../css/main.css"/>
 </head>
-<body>
+
+<body class="steven">
     <header id="header">
         <div class="logo">
             <a href="index.html">
@@ -20,6 +21,19 @@
             <a href="content3.html" class="sub_menue"> Menüpunkt 3 </a>
             <a href="content4.html" class="sub_menue"> Menüpunkt 4 </a>
         </nav>
+        <button id="burger_menue">☰</button>
+        <nav id="mobile_menue" class="wrap_center mobile_hidden">
+            <div class="logo">
+                <div class="logo_inner">Mast Obst</div>
+            </div>
+            <button id="mobile_close">X</button>
+            <div class="mobile_menue">
+                <a href="content1.html" class="sub_menue"> Menüpunkt 1 </a>
+                <a href="content2.html" class="sub_menue"> Menüpunkt 2 </a>
+                <a href="content3.html" class="sub_menue"> Menüpunkt 3 </a>
+                <a href="content4.html" class="sub_menue"> Menüpunkt 4 </a>
+            </div>
+        </nav>
     </header>  
 
     <div id="banner_wrap">
@@ -31,66 +45,113 @@
         <span id="banner_counter"></span>
     </div> 
 
-    <h1>Als Neukunde anmelden</h1> 
+    <main id="content">
+        <h1 class="main_title">Als Neukunde anmelden</h1> 
+        <div class="content_wrap">
+            <div class="content_container">
+                <div class="content-left">
+                    <h2 class="content_title">Ihre Vorteile</h2>
+                    <p class="content_desc">Erhalten Sie regelmäßig Informationen über
+                                            neue Produkte in unserem Onlineshop</p> 
+                </div>
+                <div class="content-right">
+                    <div class="content_image_wrap">
+                        <img class="content_image" src="/public_html/img/banner/dummy2.jpg" alt="Vorteile">
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <center>
-        <form>
-            <fieldset>
+        <div class="content_wrap">
+            <div class="content_container">
+                <div class="content-left">
+                    <h2 class="content_title">Ihre Vorteile 2</h2>
+                    <p class="content_desc">Weitere Vorteile...</p>
+                </div>
+                <div class="content-right">
+                    <div class="content_image_wrap">
+                        <img class="content_image" src="/public_html/img/banner/dummy2.jpg" alt="weitere Vorteile">
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                <legend>Anmeldung</legend>
-                
-                <br>
+        <div class="content_wrap">
+            <div class="content_container">
+                <div class="content-left">
+                    <h2 class="content_title">Ihre Vorteile 3</h2>
+                    <p class="content_desc">Noch mehr Vorteile...</p>
+                </div>
+                <div class="content-right">
+                    <div class="content_image_wrap">
+                        <img class="content_image" src="/public_html/img/banner/dummy2.jpg" alt="Noch mehr Vorteile">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
 
-                <label for="name">Name</label>
-                <input id="name" name="vorname" type="text" class="fields" required>
-
-                <br>
-                <br>
-
-                <label for="lastname">Nachname</label>
-                <input id="lastname" name="nachname" type="text" class="fields" required>
-
-                <br>
-                <br>
-
-                <label for="mail">E-Mail Adresse</label>
-                <input id="mail" name="email" type="email" class="fields" required>
-
-                <br>
-                <br>
-
-                <label for="birthdate">Geburtsdatum</label>
-                <input id="birthdate" name="geburtstag" type="date" class="fields" required>
-
-                <br>
-                <br>
-
-                <label for="news">Ich wünsche regelmäßig über Neuigkeiten per E-Mail informiert zu werden</label>
-                <input id="news" name="newsletter" type="checkbox" class="check">
-
-                <br>
-                <br>
-
-                <span  class="fields">Kundentyp</span>
-                <select  class="fields">
-                    <option>Privatkunde</option>
-                    <option>Firmenkunde</option>
-                </select>
-
-                <br>
-                <br>
-
-                <label for="password">Passwort</label>
-                <input id="password" name="passwort" type="password" class="fields" pattern="[A-Za-z0-9]{8}" placeholder="8 Zeichen langes Passwort" required>
-
-                <br>
-                <br>
-
-                <button id="submit_button" type="" value="Anmelden" class="buttons">Anmelden</button>
-            </fieldset>
-        </form>
-    </center>
+        <div class="register_form">
+            <center>
+                <form>
+                    <fieldset class="wrap_center field_container" >
     
+                        <legend>Anmeldung</legend>
+                        
+                        <br>
+    
+                        <label for="name">Name</label>
+                        <input id="name" name="vorname" type="text" class="fields" required>
+    
+                        <br>
+                        <br>
+    
+                        <label for="lastname">Nachname</label>
+                        <input id="lastname" name="nachname" type="text" class="fields" required>
+    
+                        <br>
+                        <br>
+    
+                        <label for="mail">E-Mail Adresse</label>
+                        <input id="mail" name="email" type="email" class="fields" required>
+    
+                        <br>
+                        <br>
+    
+                        <label for="birthdate">Geburtsdatum</label>
+                        <input id="birthdate" name="geburtstag" type="date" class="fields" required>
+    
+                        <br>
+                        <br>
+    
+                        <label for="news">Ich wünsche regelmäßig über Neuigkeiten per E-Mail informiert zu werden</label>
+                        <input id="news" name="newsletter" type="checkbox" class="check">
+    
+                        <br>
+                        <br>
+    
+                        <span  class="fields">Kundentyp</span>
+                        <select  class="fields">
+                            <option>Privatkunde</option>
+                            <option>Firmenkunde</option>
+                        </select>
+    
+                        <br>
+                        <br>
+    
+                        <label for="password">Passwort</label>
+                        <input id="password" name="passwort" type="password" class="fields" pattern="[A-Za-z0-9]{8}" placeholder="8 Zeichen langes Passwort" required>
+    
+                        <br>
+                        <br>
+    
+                        <button id="submit_button" type="" value="Anmelden" class="buttons">Anmelden</button>
+                    </fieldset>
+                </form>
+            </center>
+        </div>
+    </main>
+
     <script src="/public_html/js/main.js"></script>
 </body>
 </html>
