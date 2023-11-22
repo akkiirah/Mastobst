@@ -10,31 +10,45 @@
         padding: 1rem;
 
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        @media only screen and (min-width: $xl) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        @media only screen and (min-width: $xxl) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+        @media only screen and (min-width: 1860px) {
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+        }
         grid-gap: 1rem; 
 
     }
 
     .shop_item {
         position: relative;
-        padding: .5rem;
+        padding: 1rem;
         background-color: $clr_main;
         border-radius: .75rem;
         transition: opacity 250ms ease, transform 250ms ease-in-out; 
 
         .shop_item-title {
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 1rem; 
         }
 
         .shop_item_image-wrap {
             height: auto;
             width: 100%;
+            height: 8rem;
             margin-bottom: .5rem;
             
             .shop_item-image {
-                height: auto;
+                height: 100%;
+                object-fit: contain;
                 width: 100%;
             }
         }
@@ -70,9 +84,14 @@
 
         #shop_cart-content {
             display: grid; 
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(4, 1fr);
             grid-gap: 1rem;
+
+            @media only screen and (min-width: $l) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+            }
             
             padding: 1rem;
         }

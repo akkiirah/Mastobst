@@ -66,7 +66,7 @@ function removeFromCart(item, button) {
 function checkRemainingItems() {
     console.log("checked");
 
-    if(shopItemsContainer.childElementCount > 3) { 
+    if(shopItemsContainer.childElementCount > 3 && shopItemsContainer.childElementCount < 10 ) { 
         shopItemsContainer.style.gridTemplateRows = "1fr 1fr 1fr 1fr";
         shopItemsContainer.style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
 
