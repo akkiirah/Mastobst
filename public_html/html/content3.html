@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mast Obst: Über Uns</title>
     <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+
 </head>
-<body class="manar">
-    <header id="header" class="wrap_center">
-        <div class="logo">
+<body class="manar">                   <!-- Header-Bereich -->
+    <header id="header" class="wrap_center"> 
+        <div class="logo">             <!-- Logo und Navigationselemente -->
             <a href="index.html">
                 <img class="logo_inner" src="/public_html/img/Sie_wissen_nicht_was_das_fuer_ein_auffwand_war_2.png.png" />
             </a>
@@ -34,7 +35,7 @@
             </div>
         </nav>
     </header>
-    <div id="banner_wrap">
+    <div id="banner_wrap">  <!-- Banner-Bereich -->
         <figure class="banner">
             <img id="banner_image-1" class="banner_image" src="/public_html/img/banner/alleksana1.jpg" alt="Dummy Banner">
             <img id="banner_image-2" style="opacity: 0;" class="banner_image" src="/public_html/img/banner/alleksana.jpg"> 
@@ -49,10 +50,9 @@
             <div class="content_container">
                 <div class="content-left">
                     <h2 class="content_title">Unsere Geschichte</h2>
-                    <p class="content_desc"> Erfahren Sie mehr über unsere Unternehmensgeschichte und wie wir zu einem führenden Anbieter von Obstprodukten geworden sind.</p>
-                    <button class="content_learn_more" onclick="toggleText()">Mehr erfahren</button>
-                    <p id="history" class="hidden">Unsere Geschichte begann vor vielen Jahren...</p>
-                    <!--hidden text mit klick jS-->
+                    <p class="content_desc"> Seit vielen Jahren sind wir mit Leidenschaft im Obstgeschäft tätig. Was einst als lokale Obsthandlung begann,
+                                             hat sich zu einer reichhaltigen Quelle für frische und qualitativ hochwertige Früchte entwickelt. Unsere Bestreben war es immer,
+                                              unsere Kunden das Beste aus der Natur anzubieten..</p> 
                 </div>
                 <div class="content-right">
                     <!-- Bild für "Unsere Geschichte" -->
@@ -67,8 +67,9 @@
             <div class="content_container">
                 <div class="content-left">
                     <h2 class="content_title">Unsere Mission</h2>
-                    <p class="content_desc">Erfahren Sie mehr über unsere Mission, hochwertige Obstprodukte anzubieten und unsere Kunden zufrieden zu stellen.</p>
-                    <button class="content_learn_more">Mehr erfahren</button>
+                    <p class="content_desc">Bei Mastobstladen glauben wir daran, dass hochwertiges Obst nicht nur ein Genuss für den Gaumen, sondern auch ein Beitrag zu einem gesunden Lebensstil ist.
+                                             Unsere Mission ist es, Ihnen stets die frischesten und köstlichsten Früchte anzubieten, 
+                                            die von vertrauenswürdigen Bauern stammen. Wir setzen auf Nachhaltigkeit und Qualität, um Ihre Ernährung und Ihr Wohlbefinden zu unterstützen.</p>
                 </div>
                 <div class="content-right">
                     <!-- Bild für "Unsere Mission" -->
@@ -83,8 +84,9 @@
             <div class="content_container">
                 <div class="content-left">
                     <h2 class="content_title">Versandbedingungen</h2>
-                    <p class="content_desc">Erfahren Sie mehr über unsere Versandbedingungen und wie wir sicherstellen, dass Ihre Bestellungen pünktlich und in bestem Zustand bei Ihnen ankommen.</p>
-                    <button class="content_learn_more">Mehr erfahren</button>
+                    <p class="content_desc">Um Ihnen den bestmöglichen Service zu bieten, haben wir unseren Horizont erweitert und bieten nun auch einen bequemen Online-Shop an. 
+                                            Bestellen Sie Ihre Lieblingsfrüchte ganz einfach von zu Hause aus. Unser engagiertes Team sorgt dafür, dass Ihre Bestellung mit größter Sorgfalt verpackt und zuverlässig verschickt wird. 
+                                            Vertrauen Sie darauf, dass Ihre frischen Früchte sicher und unversehrt bei Ihnen ankommen.</p>
                 </div>
                 <div class="content-right">
                     <!-- Bild für "Versandbedingungen" -->
@@ -95,20 +97,46 @@
             </div>
         </div>
 
-        <button class="content_view_all">Alle ansehen</button>
+        <!--  <button class="content_view_all" onclick="toggleAll()">Alle ansehen</button>     -->
     </main>
 
-    <div class="container">
-        <h1> unsere Standort</h1> <!--Google Maps-API-Code hier-->
-        <iframe src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2612.205257783309!2d9.736463041311938!3d49.10174097148545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4798506c06f85091%3A0x1805be1c80527a43!2sGewerbliche%20Schule!5e0!3m2!1sde!2sde!4v1697568903834!5m2!1sde!2sde"
-         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">"</iframe>
-    </div>
-
-    <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/RwCu0YyCoYo?si=77fhGnQ6HuzBGZlz&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
+   <!-- How it works -->
+<section class="grid-container">
+    <div class="how-it-works">
+        <div class="step">
+            <div class="step-content">
+                <h3> <img class="round-image" src="/public_html/img/obst/person-obst.jpg" alt="Bild 1"> Sie bestellen </h3>
+                <p>Verwenden Sie unseren Obst-Rechner, um Ihre optimale Obstmenge zu ermitteln.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-content">
+                <h3> <img class="round-image" src="/public_html/img/obst/person-obst.jpg" alt="Bild 1"> Wir liefern</h3>
+                <p>Wir liefern Ihren Obstkorb direkt in Ihr Büro.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-content">
+                <h3> <img class="round-image" src="/public_html/img/obst/person-obst.jpg" alt="Bild 1"> Sie genießen</h3>
+                <p>Ihre Mitarbeiter freuen sich über die Vielfalt und Qualität Ihres Obstkorbes.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-content">
+                <h3> <img class="round-image" src="/public_html/img/obst/person-obst.jpg" alt="Bild 1"> Wir holen ab</h3>
+                <p>Wir tauschen Ihren leeren Korb gegen einen Neuen aus!</p>
+            </div>
+        </div>
+     </div> 
+             <!-- YouTube-Video-Code hier -->
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RwCu0YyCoYo?si=77fhGnQ6HuzBGZlz&showinfo=0"
+             title="YouTube video player" frameborder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section>  
     
-   <!-- kunden Bewertung -->
+
+     <!-- Kundenbewertungen -->
     <div class="customer-reviews">
         <div class="customer-review">
             <img class="customer-image" src="/public_html/img/obst/Lisa.webp" alt="Customer 1">
@@ -132,12 +160,16 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <h1> unsere Standort</h1> <!--Google Maps-API-Code hier-->
+        <iframe src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2612.205257783309!2d9.736463041311938!3d49.10174097148545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4798506c06f85091%3A0x1805be1c80527a43!2sGewerbliche%20Schule!5e0!3m2!1sde!2sde!4v1697568903834!5m2!1sde!2sde"
+         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">"</iframe>
+    </div>
+
     
-    
- 
-    <footer>
+    <footer>  <!-- Footer-Bereich -->
         <div id="footer_wrap" class="wrap_center">
-            <div class="footer_content"> 
+            <div class="footer_content">  <!-- Kontaktinformationen  -->
                 <div class="footer_content-left">
                     <h2 class="footer_title">Kontakt</h2>
                     <span><b>Mast Obst GmbH AG Inc.</b></span>
@@ -147,25 +179,50 @@
                     <span><span class="icon fax"></span>01575 842945-20</span>
                     <a href="mailto:tobias.simon02@gmail.com" ><span class="icon email"></span>E-Mail schreiben</a>
                 </div>
-   
+                <div class="footer_content-right">
+                    <h2 class="footer_title">Öffnungszeiten</h2>
+                    <div class="footer_times-wrap">
+                        <div class="footer_days">     <!-- Öffnungszeiten  -->
+                            <span><b>Montag: </b></span>
+                            <span><b>Dienstag: </b></span>
+                            <span><b>Mittwoch: </b></span>
+                            <span><b>Donnerstag: </b></span>
+                            <span><b>Freitag: </b></span>
+                        </div>
+                        <div class="footer_times">
+                            <span>08:00 Uhr bis 11:30 Uhr</span>
+                            <span>08:00 Uhr bis 11:30 Uhr und  14:00 Uhr bis 16:30 Uhr</span>
+                            <span>Geschlossen</span>
+                            <span>09:00 Uhr bis 11:30 Uhr und  14:00 Uhr bis 18:30 Uhr</span>
+                            <span>08:00 Uhr bis 11:30 Uhr</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="toplink">I</div>   <!-- PDF-Download-Link -->
+            <div id="toplink"><a href="/public_html/img/PDF/CEO.pdf" download="/public_html/img/PDF/CEO.pdf">PDF herunterladen</a></div>
+            
+        </div>
     </footer>
 
     
         
 
+ <!-- 
+    <script>
+        function toggleAll() {
+            var container = document.querySelector('.container');
+            var video = document.querySelector('.video');
+            var reviews = document.querySelector('.customer-reviews');
 
-
-<script>
-    function toggleText() {
-        var element = document.getElementById('history');
-        if (element.style.opacity != "1") {
-            element.style.opacity = "1";
-        } else {
-            element.style.opacity = "0";
+            container.style.display = (container.style.display === 'none' || container.style.display === '') ? 'block' : 'none';
+            video.style.display = (video.style.display === 'none' || video.style.display === '') ? 'block' : 'none';
+            reviews.style.display = (reviews.style.display === 'none' || reviews.style.display === '') ? 'block' : 'none';
         }
-        console.log(element.style.opacity);  
-    }
-</script>
+    </script>
+-->
+
+
 
 <script src="/public_html/js/main.js"> </script>
 </body>
