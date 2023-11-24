@@ -78,16 +78,12 @@ footer {
             }
 
             .footer_content-sponsor {
-                display: flex;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-gap: 1rem;
                 margin-left: 6rem;
-                gap: 1rem;
-                justify-content: center;
                 align-items: center;
-                flex-direction: column;
-                
-                @media only screen and (min-width: 1600px) {
-                    flex-direction: row;
-                }
                 
                 img {
                     border-radius: 0.75rem;
@@ -96,6 +92,23 @@ footer {
                     &:hover {
                         transform: scale(1.1);
                     }
+                }
+
+                .sponsor-image { 
+                    height: 60%;
+                    margin-top: auto;
+                }
+
+                .ekomi-rating {
+                    grid-area: 1 / 1 / 2 / 2; 
+                    margin-left: auto;
+                }
+                .google-rating {
+                    grid-area: 1 / 2 / 2 / 3; 
+                }
+                > button {
+                    grid-area: 2 / 1 / 3 / 3; 
+                    margin-bottom: auto;
                 }
             }
         }
