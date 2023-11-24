@@ -6,6 +6,7 @@ footer {
     padding-bottom: 2rem;
     border-radius: 1rem;
     box-shadow: $box_shadow-menues;
+    overflow: hidden;
 
     #footer_wrap {
         
@@ -20,28 +21,12 @@ footer {
         .footer_content{
             display: flex;
             gap: 2rem;
-            justify-content: space-between;
             flex-direction: column;
             position: relative;
-
-            &::after {
-                content: none;
-                position: absolute;
-                left: clamp(13rem, -15.6667rem + 59.7222vw, 56rem);
-                width: 2px;
-                height: 33%;
-                top: 50%;
-                transform: translateY(-50%);
-                background-color: $clr_color;
-            }
     
             @media only screen and (min-width: $m) {
-                gap: 4rem; 
+                gap: 6rem; 
                 flex-direction: row;
- 
-                &::after {
-                    content: '';
-                }
             }    
 
             .footer_content-left {
@@ -57,6 +42,7 @@ footer {
     
             .footer_content-right {
                 display: flex;
+                position: relative;
                 flex-direction: column;
 
                 .footer_times-wrap {
@@ -77,6 +63,40 @@ footer {
                         padding-left: 1rem;
                     }
                 }
+
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: -6rem;
+                    width: 2px;
+                    height: 33%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: $clr_color;
+                }
+            }
+
+            .footer_content-sponsor {
+                display: flex;
+                margin-left: 6rem;
+                gap: 1rem;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                
+                @media only screen and (min-width: 1600px) {
+                    flex-direction: row;
+                }
+                
+                img {
+                    border-radius: 0.75rem;
+                    transition: transform 250ms ease;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
             }
         }
 
@@ -87,9 +107,56 @@ footer {
             width: 3rem;
             height: 3rem;
             border-radius: .25rem;
+            border-top-left-radius: 0;
+            border-bottom-right-radius: 0;
             text-align: center;
             padding-block: 1rem;
             background-color: $clr_color;
+
+            transition: transform 250ms ease;
+
+            &:hover {
+                transform: scale(110%);
+            
+                .arrow-up {
+                    top: 12.5%;
+                    animation: arrow_bounce_anim 1s ease;
+                }
+            }
+
+            .arrow-up {
+                position: absolute;
+                left: 12.5%;
+                top: 12.5%;
+                object-fit: contain;
+                height: 75%;
+                width: 75%;
+                transition: top 250ms ease;
+            }
         }
     }
 }
+
+@keyframes arrow_bounce_anim {
+    0% {
+      transform: scale(1, 1) translateY(0);
+    }
+    10% {
+      transform: scale(1.1, 0.9) translateY(0);
+    }
+    30% {
+      transform: scale(0.9, 1.1) translateY(-6px);
+    }
+    50% {
+      transform: scale(1, 1) translateY(0);
+    }
+    57% {
+      transform: scale(1, 1) translateY(-2px);
+    }
+    64% {
+      transform: scale(1, 1) translateY(0);
+    }
+    100% {
+      transform: scale(1, 1) translateY(0);
+    }
+  }

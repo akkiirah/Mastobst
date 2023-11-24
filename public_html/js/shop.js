@@ -101,5 +101,5 @@ function notifyBought() {
         items = items + " " + shopCartContainer.children[i].firstElementChild.nextElementSibling.innerHTML + ","; 
     }
     
-    alert("Sie haben folgende Gegenstände bestellt: " + items);
+    alert("Sie haben " + shopCartContainer.childElementCount + " Gegenstände gekauft.\n" + "Folgende Gegenstände wurden bestellt: " + items);
 }
