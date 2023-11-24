@@ -8,7 +8,9 @@ shopButtons.forEach(shopButton => {
     shopButton.addEventListener("click", moveItems);
 });
 
-buyButton.addEventListener("click", notifyBought);
+if (buyButton) {
+    buyButton.addEventListener("click", notifyBought);
+}
 
 function moveItems() {
     let button = this;
