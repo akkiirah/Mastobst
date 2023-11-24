@@ -8,11 +8,9 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css"/>
 </head>
 <body>
-    <header id="header">
+    <header id="header" class="wrap_center">
         <div class="logo">
-            <a href="index.html">
-                <img class="logo_inner" src="/public_html/img/Sie_wissen_nicht_was_das_fuer_ein_auffwand_war_2.png.png" />
-            </a>
+            <img class="logo_inner" src="/public_html/img/Sie_wissen_nicht_was_das_fuer_ein_auffwand_war_2.png.png" />
         </div>
         <nav id="main_menue">
             <a href="content1.html" class="sub_menue"> Menüpunkt 1 </a>
@@ -20,6 +18,80 @@
             <a href="content3.html" class="sub_menue"> Menüpunkt 3 </a>
             <div class="sub_menue"> Menüpunkt 4 </div>
         </nav>
-    </header>    
+        <button id="burger_menue">☰</button>
+        <nav id="mobile_menue" class="wrap_center mobile_hidden">
+            <div class="logo">
+                <div class="logo_inner">Mast Obst</div>
+            </div>
+            <button id="mobile_close">X</button>
+            <div class="mobile_menue">
+                <a href="content1.html" class="sub_menue"> Menüpunkt 1 </a>
+                <a href="content2.html" class="sub_menue"> Menüpunkt 2 </a>
+                <a href="content3.html" class="sub_menue"> Menüpunkt 3 </a>
+                <a href="content4.html" class="sub_menue"> Menüpunkt 4 </a>
+            </div>
+        </nav>
+    </header>
+
+    <div id="banner_wrap">
+        <figure class="banner">
+            <img id="banner_image-1" class="banner_image" src="/public_html/img/banner/pexels-ella-olsson.jpg" alt="Dummy Banner" />
+            <img id="banner_image-2" style="opacity: 0;" class="banner_image" src="/public_html/img/banner/pexels-ella-olsson1.jpg" /> 
+            <img id="banner_image-3" style="opacity: 0;" class="banner_image" src="/public_html/img/banner/pexels-ella-olsson2.jpg" />  
+        </figure>
+        <button id="banner_stop">II</button>
+        <span id="banner_counter"></span>
+    </div>
+
+    <main id="content">
+        <h1 class="main_title">Hallo Adelina</h1>
+    </main>
+    
+    <footer>
+        <div id="footer_wrap" class="wrap_center">
+            <div class="footer_content"> 
+                <div class="footer_content-left">
+                    <h2 class="footer_title">Kontakt</h2>
+                    <span><b>Mast Obst GmbH AG Inc.</b></span>
+                    <span>Max-Eyth-Straße 9</span>
+                    <span>74523 Schwäbisch Hall</span>
+                    <span><span class="icon phone"></span>01575 842945-0</span>
+                    <span><span class="icon fax"></span>01575 842945-20</span>
+                    <a href="mailto:tobias.simon02@gmail.com" ><span class="icon email"></span>E-Mail schreiben</a>
+                </div>
+                <div class="footer_content-right">
+                    <h2 class="footer_title">Öffnungszeiten</h2>
+                    <div class="footer_times-wrap">
+                        <div class="footer_days">
+                            <span><b>Montag: </b></span>
+                            <span><b>Dienstag: </b></span>
+                            <span><b>Mittwoch: </b></span>
+                            <span><b>Donnerstag: </b></span>
+                            <span><b>Freitag: </b></span>
+                        </div>
+                        <div class="footer_times">
+                            <span>08:00 Uhr bis 11:30 Uhr</span>
+                            <span>08:00 Uhr bis 11:30 Uhr und  14:00 Uhr bis 16:30 Uhr</span>
+                            <span>Geschlossen</span>
+                            <span>09:00 Uhr bis 11:30 Uhr und  14:00 Uhr bis 18:30 Uhr</span>
+                            <span>08:00 Uhr bis 11:30 Uhr</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_content-sponsor">
+                    <img class="sponsor-image ekomi-rating" src="../img/sponsors/ekomi-rating.webp" alt="Bewertung auf Ekomi">
+                    <img class="sponsor-image google-rating" src="../img/sponsors/google-rating.webp" alt="Bewertung auf Google">
+                    <button>
+                        <a class="pdf-download" href="/public_html/img/PDF/CEO.pdf" download="eKomi_silver_seal_of_approval.pdf">
+                            <span class="icon download">PDF herunterladen</span>
+                        </a>
+                    </button>
+                </div>
+            </div>
+            <a href="#header" id="toplink">
+                <img src="../img/icon/arrow-up.png" class="arrow-up"></span>
+            </div> 
+        </div>
+    </footer>
 </body>
 </html>
