@@ -22,7 +22,7 @@ function moveItems() {
 }
 
 function addToCart(item, button) {
-    item.style.transform = "scale(1.15)";
+    item.style.transform = "scale(2)";      
     window.setTimeout(function() {
         item.style.transform = "scale(0)";
     }, 100);
@@ -34,7 +34,7 @@ function addToCart(item, button) {
     }, 350);
 
     window.setTimeout(function() {
-        item.style.transform = "scale(1.15)";
+        item.style.transform = "scale(1.5)";
         item.style.opacity = "1";
     }, 450);
 

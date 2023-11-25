@@ -117,6 +117,16 @@ body {
     @media only screen and (min-width: $xl) {
         padding-inline: 4rem;
     }
+
+     main#content & {
+        padding-inline: 1rem;
+        @media only screen and (min-width: $l) {
+            padding-inline: 4rem;
+        }
+        @media only screen and (min-width: $xl) {
+            padding-inline: 6rem;
+        }
+    }
 }
 
 .icon {
