@@ -7,6 +7,14 @@ main#content {
     margin-bottom: 8rem;
     padding-inline: 6rem;
     color: $clr_second;
+    position: relative;
+
+    .content_warenkorb {
+        position: absolute;
+        top: 0;
+        right: calc(33% - 7.5rem);
+        transform: translateX(50%);
+    }    
 
     .main_title {
         font-size: 56px;

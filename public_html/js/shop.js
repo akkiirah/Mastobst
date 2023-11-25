@@ -8,7 +8,9 @@ shopButtons.forEach(shopButton => {
     shopButton.addEventListener("click", moveItems);
 });
 
-buyButton.addEventListener("click", notifyBought);
+if (buyButton) {
+    buyButton.addEventListener("click", notifyBought);
+}
 
 function moveItems() {
     let button = this;
@@ -101,5 +103,5 @@ function notifyBought() {
         items = items + " " + shopCartContainer.children[i].firstElementChild.nextElementSibling.innerHTML + ","; 
     }
     
-    alert("Sie haben folgende Gegenstände bestellt: " + items);
+    alert("Sie haben " + shopCartContainer.childElementCount + " Gegenstände gekauft.\n" + "Folgende Gegenstände wurden bestellt: " + items);
 }

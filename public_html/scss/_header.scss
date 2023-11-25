@@ -33,9 +33,12 @@
     .logo{
         max-width: 8.5rem;
         max-height: 4rem;
-        transition: max-width 250ms ease;
+        margin-left: 1rem;
+        
+        transition: margin 250ms ease, max-width 250ms ease;
         .scroll & {
             max-width: 4.5rem;
+            margin-left: 2rem;
         }
 
         .logo_inner {

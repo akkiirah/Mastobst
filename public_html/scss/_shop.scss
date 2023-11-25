@@ -1,11 +1,11 @@
 #shop_wrap {
     display: flex;
+    gap: 3rem;
 
     #shop_items-wrap {
         background-color: $clr_main_darker;
         border: 1px solid $clr_main_light;
-        border-top-left-radius: 1.25rem;
-        border-bottom-left-radius: 1.25rem;
+        border-radius: 1.25rem;
         width: 66%;
         padding: 1rem;
 
@@ -76,9 +76,7 @@
     #shop_cart-wrap {
         background-color: $clr_main_darker;
         border: 1px solid $clr_main_light;
-        border-left: none;
-        border-top-right-radius: 1.25rem;
-        border-bottom-right-radius: 1.25rem;
+        border-radius: 1.25rem;
         width: 33%;
         position: relative;
 
