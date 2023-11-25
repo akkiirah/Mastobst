@@ -4,6 +4,7 @@
 $clr_main: #1b1b1c;
 $clr_main_light: lighten($clr_main, $amount: 4%);
 $clr_main_dark: darken($clr_main, 4%);
+$clr_main_darker: darken($clr_main, 6%);
 $clr_second: #efefef;
 $clr_second_dark: darken($clr_second, 10%);
 $clr_second_darker: darken($clr_second, 20%);

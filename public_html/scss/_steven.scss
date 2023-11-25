@@ -1,5 +1,5 @@
 fieldset {
-    width: 33%;
+    width: 100%;
 }
 
 form {
@@ -21,5 +21,15 @@ form {
         height: 25px;
         width: 25px;
     }
+}
+
+.register_form{
+    margin-top: 4rem;
+}
+
+.field_container{
+    background-color: $clr_main_light;
+    border-radius: 2.5%;
+    border-style: none;
 }
 
