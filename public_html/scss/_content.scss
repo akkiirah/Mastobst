@@ -9,6 +9,20 @@ main#content {
     color: $clr_second;
     position: relative;
 
+    .startseite &::after {
+        content: '';
+        position: absolute;
+        /* Muss man überprüfen
+        background: linear-gradient(0deg, $clr_main_dark 0%, rgba(255, 255, 255, 0) 100%);
+        */
+        width: 100%;
+        height: 50%;
+        bottom: 4rem;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+    }
+
     .content_warenkorb {
         position: absolute;
         top: 0;
@@ -45,6 +59,10 @@ main#content {
                 flex-direction: row; 
                 justify-content: space-between;
                 
+                .content-left { 
+                    padding-right: 0; padding-left: 2rem;
+                }
+
                 .content-right {
                     justify-content: flex-end;
                     .content_image_wrap {
@@ -74,6 +92,7 @@ main#content {
             .content-left {
                 width: 66%;
                 padding-block: 2rem;
+                padding-right: 2rem;
                 display: flex;
                 flex-direction: column;
 
@@ -92,6 +111,9 @@ main#content {
                 .content_learn_more {
                     width: fit-content;
                     background-color: $clr_color;
+                    padding-block: 1rem;
+                    padding-inline: 1.5rem;
+                    font-size: $font_size-m;
 
                     &:hover,
                     &:focus {
@@ -141,7 +163,7 @@ main#content {
         margin-inline: auto;
         background-color: $clr_color;
         display: block;
-        margin-top: 4rem;
+        margin-top: 8rem;
         font-size: $font_size-l;
         padding-inline: 2rem;
         padding-block: 1rem;
