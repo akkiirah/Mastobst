@@ -40,8 +40,8 @@
             margin-bottom: .25rem; 
         }
 
-        .shop_item-price {
-            text-align: center;
+        .shop_item_price-wrap {
+            margin-inline: auto;
             margin-bottom: 1.25rem;
         }
 
@@ -96,9 +96,9 @@
         border-radius: 1.25rem;
         width: 33%;
         position: relative;
-        height: 22rem;
+        height: 27rem;
         transition: all 250ms ease;
-        padding-bottom: 6rem;
+        padding-bottom: 8rem;
 
         #shop_cart-content {
             display: grid; 
@@ -111,6 +111,19 @@
             
             padding: 1rem;
         }
+
+        .shop_cart_balance-wrap {
+            position: absolute;
+            bottom: calc(2rem + 2rem + 20px);
+            left: 1rem;
+
+            .shop_cart-balance,
+            #shop_cart-balance,
+            > span {
+                font-size: $font_size-l;
+            }
+        }
+
 
         #shop_cart-buy {
             position: absolute;

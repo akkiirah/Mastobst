@@ -3,6 +3,7 @@ let shopButtons = document.querySelectorAll('.shop_item-add');
 const shopCartContainer = document.getElementById('shop_cart-content');
 const shopItemsContainer = document.getElementById('shop_items-wrap');
 const buyButton = document.getElementById('shop_cart-buy');
+const balanceContainer = document.getElementById('shop_cart-balance');
 
 let cooldown = false;
 
@@ -38,6 +39,7 @@ function addToCart(item, button) {
             button.innerHTML = "- entfernen";
             item.classList.add('in_cart');
             checkRemainingItems();
+            updateBalance();
         }, 350);
     
         window.setTimeout(function() {
@@ -69,6 +71,7 @@ function removeFromCart(item, button) {
         button.innerHTML = "+ hinzufügen";
         item.classList.remove('in_cart');
         checkRemainingItems();
+        updateBalance();
     }, 350);
 
     window.setTimeout(function() {
@@ -134,4 +137,25 @@ function notifyBought() {
     }
     
     alert("Sie haben " + shopCartContainer.childElementCount + " Gegenstände gekauft.\n" + "Folgende Gegenstände wurden bestellt: " + items);
+}
+
+function updateBalance() {
+    let balance = 0;
+    // Funktioniert auch, ist aber wahrscheinlich langsamer.
+    //
+    // let items = document.querySelectorAll('.shop_item-price');
+    // items.forEach(item => {
+    //     if(item.parentElement.parentElement.parentElement == shopCartContainer) {
+    //         console.log(item.innerHTML);
+    //     }
+    // });
+    
+
+    for (let i = 0; i < shopCartContainer.childElementCount; i++) {
+        let itemPriceString = shopCartContainer.children[i].firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.innerHTML;
+        let itemPrice = parseFloat(itemPriceString); 
+        balance += itemPrice;
+    }
+
+    balanceContainer.innerHTML = balance.toFixed(2);
 }
