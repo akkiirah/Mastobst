@@ -26,16 +26,18 @@
             width: 100%;
             border-top-left-radius: 0;
             border-top-right-radius: 0;
-            padding-block: 0.25rem; 
         }
     }
 
     .logo{
         max-width: 8.5rem;
         max-height: 4rem;
-        transition: max-width 250ms ease;
+        margin-left: 1rem;
+        transition: margin 250ms ease, max-width 250ms ease;
+
         .scroll & {
-            max-width: 4.5rem;
+            max-width: 6rem;
+            margin-left: 2rem;
         }
 
         .logo_inner {
@@ -76,7 +78,7 @@
             border-radius: .75rem;
 
             .scroll & {
-                font-size: $font_size-m;
+                font-size: 20px;
             }
 
             @media only screen and (min-width: $l) {

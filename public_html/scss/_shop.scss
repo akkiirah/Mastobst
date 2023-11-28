@@ -1,28 +1,25 @@
 #shop_wrap {
     display: flex;
+    gap: 3rem;
 
     #shop_items-wrap {
         background-color: $clr_main_darker;
         border: 1px solid $clr_main_light;
-        border-top-left-radius: 1.25rem;
-        border-bottom-left-radius: 1.25rem;
+        border-radius: 1.25rem;
         width: 66%;
         padding: 1rem;
-
+        height: fit-content;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         @media only screen and (min-width: $xl) {
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
         }
         @media only screen and (min-width: $xxl) {
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(4, 1fr);
         }
         @media only screen and (min-width: 1860px) {
             grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(5, 1fr);
         }
         grid-gap: 1rem; 
 
@@ -34,10 +31,18 @@
         background-color: $clr_main;
         border-radius: .75rem;
         transition: opacity 250ms ease, transform 250ms ease-in-out; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
 
         .shop_item-title {
             text-align: center;
-            margin-bottom: 1rem; 
+            margin-bottom: .25rem; 
+        }
+
+        .shop_item-price {
+            text-align: center;
+            margin-bottom: 1.25rem;
         }
 
         .shop_item_image-wrap {
@@ -55,12 +60,18 @@
 
         .shop_item-add {
             display: block;
-            margin-left: auto;
-            padding-inline: .5rem;
-            padding-block: .25rem;
+            margin-inline: auto;
+            padding-inline: .75rem;
+            padding-block: .35rem;
             border-radius: .5rem;
             font-size: $font_size-m;
             cursor: pointer;
+            transition: background 250ms ease, color 250ms ease;
+
+            &:hover {
+                background-color: #B4D3A6;
+                color: $clr_main_dark;
+            }
 
             &::before {
                 content: '';
@@ -71,26 +82,31 @@
                 right: 0;
             }
         }
+
+        &.in_cart .shop_item-add {
+            &:hover {
+                background-color: #d3a6a6;
+            }
+        }
     }
 
     #shop_cart-wrap {
         background-color: $clr_main_darker;
         border: 1px solid $clr_main_light;
-        border-left: none;
-        border-top-right-radius: 1.25rem;
-        border-bottom-right-radius: 1.25rem;
+        border-radius: 1.25rem;
         width: 33%;
         position: relative;
+        height: 22rem;
+        transition: all 250ms ease;
+        padding-bottom: 6rem;
 
         #shop_cart-content {
             display: grid; 
             grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(4, 1fr);
             grid-gap: 1rem;
 
             @media only screen and (min-width: $l) {
                 grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(4, 1fr);
             }
             
             padding: 1rem;
@@ -100,8 +116,16 @@
             position: absolute;
             right: 50%;
             bottom: 1rem;
+            padding-inline: 2rem;
+            padding-block: 1rem;
+            background-color: $clr_color;
+            font-size: 20px;
             width: calc(100% - 2rem);
             transform: translateX(50%);
+
+            &:hover {
+                background-color: $clr_color-darker;
+            }
         }
     }
 }

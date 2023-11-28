@@ -26,12 +26,10 @@ function bannerTransition(banner, num) {
 }
 
 function bannerFade(_activeImg) {
-    console.log("habs versucht");
     if(bannerPlaying) {
         if(oldImage) { bannerTransition(oldImage, 0); }
 
         oldImage = bannerImages[activeImg];
-        console.log(bannerImages[_activeImg]);
         bannerTransition(bannerImages[_activeImg], 1);
         setTimeout(bannerCounterChange, 500)
         activeImg++;
@@ -39,7 +37,6 @@ function bannerFade(_activeImg) {
     
     if(activeImg > bannerImages.length-1) {activeImg = 0}
         
-    console.log(activeImg);
     window.setTimeout(function() {bannerFade(activeImg)}, 5000);
 }
 
