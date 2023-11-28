@@ -31,10 +31,18 @@
         background-color: $clr_main;
         border-radius: .75rem;
         transition: opacity 250ms ease, transform 250ms ease-in-out; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
 
         .shop_item-title {
             text-align: center;
-            margin-bottom: 1rem; 
+            margin-bottom: .25rem; 
+        }
+
+        .shop_item-price {
+            text-align: center;
+            margin-bottom: 1.25rem;
         }
 
         .shop_item_image-wrap {
