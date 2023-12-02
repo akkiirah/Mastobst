@@ -5,7 +5,14 @@ const shopItemsContainer = document.getElementById('shop_items-wrap');
 const buyButton = document.getElementById('shop_cart-buy');
 const balanceContainer = document.getElementById('shop_cart-balance');
 
+let notificationItemsText = document.getElementById('notification_container-text')
+let notificationItemsContainer = document.getElementById('notification_container-items');
+let notificationPriceContainer = document.getElementById('notification_container-price');
+const notificationBackground = document.getElementById('notification_container-background');
+const notificationClose = document.getElementById('notification_container-close');
+
 let cooldown = false;
+let balance = 0;
 
 shopButtons.forEach(shopButton => {
     shopButton.addEventListener("click", moveItems);
@@ -14,6 +21,8 @@ shopButtons.forEach(shopButton => {
 if (buyButton) {
     buyButton.addEventListener("click", notifyBought);
 }
+
+notificationClose.addEventListener("click", closeNotificationContainer);
 
 function moveItems() {
     let button = this;
@@ -42,17 +51,12 @@ function addToCart(item, button) {
             updateBalance();
         }, 350);
     
-        window.setTimeout(function() {
-            item.style.transform = "scale(1.2)";
-            item.style.opacity = "1";
-        }, 450);
-    
-        console.log(cooldown);
+        window.setTimeout(function() { item.style.transform = "scale(1.2)"; }, 450);
     
         window.setTimeout(function() {
-            window.setTimeout(function() {item.style.transform = "scale(1)";}, 100);
+            item.style.transform = "scale(1)";
             cooldown = false;
-        }, 550);
+        }, 650);
 }
 
 function removeFromCart(item, button) {
@@ -74,15 +78,12 @@ function removeFromCart(item, button) {
         updateBalance();
     }, 350);
 
-    window.setTimeout(function() {
-        item.style.transform = "scale(1.2)";
-        item.style.opacity = "1";
-    }, 450);
+    window.setTimeout(function() { item.style.transform = "scale(1.2)"; }, 450);
 
     window.setTimeout(function() {
-        window.setTimeout(function() {item.style.transform = "scale(1)";}, 100);
+        item.style.transform = "scale(1)";
         cooldown = false;
-    }, 550);
+    }, 650);
 }
 
 function checkRemainingItems() {
@@ -130,17 +131,59 @@ function changeContainerHeight(item) {
 }
 
 function notifyBought() {
-    let items = "";
+    notificationBackground.style.display = 'block';
+    notificationBackground.style.opacity = '1';
 
-    for (let i = 0; i < shopCartContainer.childElementCount; i++) {
-        items = items + " " + shopCartContainer.children[i].firstElementChild.nextElementSibling.innerHTML + ","; 
+    window.setTimeout(function() {
+        notificationBackground.style.backdropFilter  = 'blur(.5em)';
+    }, 100);
+
+    window.setTimeout(function() {
+        notificationClose.style.transform  = 'scale(1) translate(50%, -50%)';
+    }, 2000);
+
+
+    window.setTimeout(function() {
+        notificationPriceContainer.style.transform  = 'scale(2)';
+    }, 100);
+
+    window.setTimeout(function() {
+        notificationPriceContainer.style.transform  = 'scale(.7)';
+    }, 400);
+
+    window.setTimeout(function() {
+        notificationPriceContainer.style.transform  = 'scale(1.5)';
+    }, 600);
+
+    window.setTimeout(function() {
+        notificationPriceContainer.style.transform  = 'scale(1)';
+    }, 700);
+
+    window.setTimeout(function() {
+        notificationPriceContainer.style.borderBottom = '1px solid #8C271E';
+    }, 1000);
+
+    console.log(shopCartContainer.childElementCount);
+    if(shopCartContainer.childElementCount <= 0) { 
+        notificationItemsText.innerHTML = "Es sind keine Gegenstände im Warenkorb."
+        notificationPriceContainer.innerHTML = "0.00€";
+        return;
     }
-    
-    alert("Sie haben " + shopCartContainer.childElementCount + " Gegenstände gekauft.\n" + "Folgende Gegenstände wurden bestellt: " + items);
+    else { notificationItemsText.innerHTML = "Sie haben folgende Gegenstände gekauft:" }
+
+    notificationPriceContainer.innerHTML = balance + "€";
+    for (let i = 0; i < shopCartContainer.childElementCount; i++) {
+
+        window.setTimeout(function() {
+            notificationItemsContainer.innerText += "ー " + shopCartContainer.children[i].firstElementChild.nextElementSibling.innerHTML + "\n"; 
+        }, 500 * (i+1));
+    }
+
+
 }
 
 function updateBalance() {
-    let balance = 0;
+    balance = 0;
     // Funktioniert auch, ist aber wahrscheinlich langsamer.
     //
     // let items = document.querySelectorAll('.shop_item-price');
@@ -158,4 +201,20 @@ function updateBalance() {
     }
 
     balanceContainer.innerHTML = balance.toFixed(2);
+    balance = balance.toFixed(2);
+}
+
+function closeNotificationContainer() {
+    notificationBackground.style.backdropFilter  = 'blur(0)';
+    notificationBackground.style.opacity = '0';
+
+    window.setTimeout(function() {
+        notificationClose.style.transform  = 'scale(0) translate(50%, -50%)';
+    }, 100);
+
+    window.setTimeout(function() {
+        notificationBackground.style.display = 'none';
+        notificationItemsContainer.innerText = '';
+        notificationPriceContainer.style.borderBottom = '1px solid transparent';
+    }, 750);
 }

@@ -142,3 +142,88 @@
         }
     }
 }
+
+#notification_container-background {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.253);
+    transition: backdrop-filter 550ms ease, opacity 550ms ease;
+    z-index: 101;
+    opacity: 0;
+    display: none;
+
+    #notification_container-wrap {
+        padding-inline: 4rem;
+        padding-block: 3rem;
+        width: 66%;
+        height: auto;
+        background-color: #1b1b1cdf;
+        border: 1px solid $clr_second_darker;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        color: $clr_second;
+        border-radius: 1.25rem;
+
+        #notification_container-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 3rem;
+            height: 3rem;
+            background-color: $clr_color;
+            background-position: center center;
+            transform: 
+            scale(0)
+            translate(50%, -50%);
+            transition: 
+            background 250ms ease,
+            transform 750ms ease;
+
+            &:hover {
+                transform: translate(45%, -45%);
+                background-color: $clr_color-darker;
+            }
+        }
+
+        .notification_container-text { 
+            font-size: $font_size-xl; ;
+            
+            &:first-of-type {
+                padding-bottom: .75rem;
+                border-bottom: 1px solid $clr_color;
+                margin-bottom: 1.5rem;
+            }
+            &:last-of-type {
+                display: inline;
+                margin-bottom: .75rem;
+            }
+        }
+        #notification_container-items {
+            font-size: $font_size-l;
+            margin-bottom: 4rem;
+            line-height: 1.2;
+        }
+        #notification_container-price {
+            display: inline-flex;
+            font-size: $font_size-xl;
+            transform: scale(0);
+            transition: 
+            transform 450ms ease,
+            border-bottom 250ms ease;
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
+
+
+
+
+
