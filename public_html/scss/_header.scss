@@ -189,19 +189,23 @@
                 position: absolute;
                 right: 1.5rem;
                 top: 0.75rem;
-                padding-inline: 1.75rem;
-                padding-block: 1rem;
-                font-size: $font_size-l;
+                padding-inline: 1rem;
+                padding-block: .75rem;
+                margin: .5rem;
+                font-size: $font_size-m;
+                border-radius: .5rem;
+                background-color: $clr_color_darker;
+
+                &:hover { background-color: $clr_color_darkest; }
+
     
                 @media only screen and (min-width: $xs) {
                     right: 2rem;
                     top: .25rem;
-                    padding-block: 1.15rem;
                 }
 
                 @media only screen and (min-width: $m) {
                     top: 1.25rem;
-                    padding-block: 1rem;
                 }
             }
     
@@ -256,10 +260,15 @@
         }
     }
     #burger_menue {
-        border-radius: .75rem;
-        font-size: $font_size-l;
-        padding-inline: 1.5rem;
-        padding-block: 1rem;
+        border-radius: .5rem;
+        font-size: $font_size-m;
+        padding-inline: 1rem;
+        padding-block: .75rem;
+        margin: .5rem;
+        background-color: $clr_color_darker;
+
+        &:hover { background-color: $clr_color_darkest; }
+
         @media only screen and (min-width: 900px) {
             display: none;
         }

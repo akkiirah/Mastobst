@@ -11,6 +11,7 @@ $clr_second_darker: darken($clr_second, 20%);
 
 $clr_color: #8C271E;
 $clr_color-darker: darken($clr_color, 10%);
+$clr_color-darkest: darken($clr_color, 20%);
 $clr_color-lighter: lighten($clr_color, $amount: 10%);
 
 $clr_color_alt: #FF8552;
