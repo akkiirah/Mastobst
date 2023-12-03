@@ -7,6 +7,7 @@ const balanceContainer = document.getElementById('shop_cart-balance');
 
 let notificationItemsText = document.getElementById('notification_container-text')
 let notificationItemsContainer = document.getElementById('notification_container-items');
+let notificationItemsContainer2 = document.getElementById('notification_container-items-2');
 let notificationPriceContainer = document.getElementById('notification_container-price');
 const notificationBackground = document.getElementById('notification_container-background');
 const notificationClose = document.getElementById('notification_container-close');
@@ -89,7 +90,6 @@ function removeFromCart(item, button) {
 }
 
 function checkRemainingItems() {
-    console.log("checked");
 
     if(shopItemsContainer.childElementCount > 3 && shopItemsContainer.childElementCount < 10 ) { 
         shopItemsContainer.style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
@@ -156,7 +156,38 @@ function notifyBought() {
         notificationClose.style.transform  = 'scale(1) translate(50%, -50%)';
     }, 2000);
 
+    if(shopCartContainer.childElementCount <= 0) { 
+        notificationItemsText.innerHTML = "Es sind keine Gegenstände im Warenkorb."
+        notificationPriceContainer.innerHTML = "0.00€";
+        notifyPrice(); 
+        return;
+    }
+    else { notificationItemsText.innerHTML = "Sie haben folgende Gegenstände gekauft:" }
 
+    notificationPriceContainer.innerHTML = balance + "€";
+    for (let i = 0; i < shopCartContainer.childElementCount; i++) {
+
+        window.setTimeout(function() {
+            if (i < 15) {
+                let item = shopCartContainer.children[i].firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.innerHTML + "€ " + "‎ ‎ ‎ ‎ " + shopCartContainer.children[i].firstElementChild.nextElementSibling.innerHTML ;
+                notificationItemsContainer.innerText += "ー " + item + "\n"; 
+            }
+            else {
+                let item = shopCartContainer.children[i].firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.innerHTML + "€ " + "‎ ‎ ‎ ‎ " + shopCartContainer.children[i].firstElementChild.nextElementSibling.innerHTML ;
+                notificationItemsContainer2.innerText += "ー " + item + "\n"; 
+            }
+
+            if(i == shopCartContainer.childElementCount -1) { 
+                window.setTimeout(function() {
+                    notifyPrice(); 
+                }, 500);
+            }
+
+        }, 500 * (i+1));
+    }
+}
+
+function notifyPrice() {
     window.setTimeout(function() {
         notificationPriceContainer.style.transform  = 'scale(2)';
     }, 100);
@@ -176,24 +207,6 @@ function notifyBought() {
     window.setTimeout(function() {
         notificationPriceContainer.style.borderBottom = '1px solid #8C271E';
     }, 1000);
-
-    console.log(shopCartContainer.childElementCount);
-    if(shopCartContainer.childElementCount <= 0) { 
-        notificationItemsText.innerHTML = "Es sind keine Gegenstände im Warenkorb."
-        notificationPriceContainer.innerHTML = "0.00€";
-        return;
-    }
-    else { notificationItemsText.innerHTML = "Sie haben folgende Gegenstände gekauft:" }
-
-    notificationPriceContainer.innerHTML = balance + "€";
-    for (let i = 0; i < shopCartContainer.childElementCount; i++) {
-
-        window.setTimeout(function() {
-            notificationItemsContainer.innerText += "ー " + shopCartContainer.children[i].firstElementChild.nextElementSibling.innerHTML + "\n"; 
-        }, 500 * (i+1));
-    }
-
-
 }
 
 function updateBalance() {
@@ -229,6 +242,8 @@ function closeNotificationContainer() {
     window.setTimeout(function() {
         notificationBackground.style.display = 'none';
         notificationItemsContainer.innerText = '';
+        notificationItemsContainer2. innerText = '';
         notificationPriceContainer.style.borderBottom = '1px solid transparent';
+        notificationPriceContainer.style.transform  = 'scale(0)';
     }, 750);
 }

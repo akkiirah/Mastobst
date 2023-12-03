@@ -20,9 +20,7 @@ main#content {
     .startseite &::after {
         content: '';
         position: absolute;
-        /* Muss man überprüfen
         background: linear-gradient(0deg, $clr_main_dark 0%, rgba(255, 255, 255, 0) 100%);
-        */
         width: 100%;
         height: 50%;
         bottom: 4rem;

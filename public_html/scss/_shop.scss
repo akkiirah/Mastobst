@@ -253,14 +253,22 @@
                 margin-bottom: .75rem;
             }
         }
-        #notification_container-items {
-            font-size: $font_size-m;
-            @media only screen and (min-width: $s) {
-                font-size: $font_size-l;
+        .notification_container_items-wrap {
+            display: flex;
+
+            #notification_container-items { margin-right: 5rem;}
+
+            #notification_container-items,
+            #notification_container-items-2 {
+                font-size: $font_size-m;
+                @media only screen and (min-width: $s) {
+                    font-size: $font_size-l;
+                }
+                margin-bottom: 4rem;
+                line-height: 1.2;
             }
-            margin-bottom: 4rem;
-            line-height: 1.2;
         }
+
         #notification_container-price {
             display: inline-flex;
             transform: scale(0);
