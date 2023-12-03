@@ -36,6 +36,10 @@ main#content {
         top: 0;
         right: calc(33% - 7.5rem);
         transform: translateX(50%);
+
+        @media only screen and (max-width: $l) {
+            display: none;
+        }
     }    
 
     .main_title {
