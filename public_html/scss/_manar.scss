@@ -14,8 +14,8 @@
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr 1fr; 
     grid-gap: 5px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
 }
 
 .step {
@@ -75,8 +75,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 Spalten */
     grid-gap: 20px;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
 }
 
 .customer-review {
@@ -131,8 +131,5 @@
     margin-top: 1rem;
     color: #ffffff;
 }
-
-
-
 
 
