@@ -212,7 +212,7 @@
                 align-items: center;
 
     
-                .sub_menue {
+                a.sub_menue {
                     position: relative;
                     padding-block: 2rem;
     
@@ -234,6 +234,21 @@
                         transform: translateX(50%);
                         transition: transform 250ms ease,
                         width 250ms ease;
+                    }
+                }
+                div.sub_menue {
+                    position: relative;
+                    padding-top: 2rem;
+                    padding-bottom: 1rem;
+                    font-size: $font_size-l;
+                    color: $clr_second;
+
+                    &::after {
+                        content: '>';
+                        position: absolute;
+                        left: -2rem;
+                        color: $clr_color;
+                        transform: translateX(50%);
                     }
                 }
             }
