@@ -27,7 +27,7 @@ footer {
     
             @media only screen and (min-width: $m) {
                 gap: 6rem; 
-                row-gap: 3rem;
+                row-gap: 1rem;
                 flex-direction: row;
             }  
             
@@ -88,9 +88,18 @@ footer {
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
-                gap: 3rem;
+                gap: 1rem;
                 width: 100%;
-                max-width: 500px;
+                flex-wrap: wrap;
+
+                @media only screen and (min-width: $xs) { 
+                    justify-content: center;
+                }
+
+                @media only screen and (min-width: $m) { 
+                    flex-wrap: nowrap;
+                    width: fit-content;
+                }
 
                 @media only screen and (min-width: $xl) { 
                     display: grid;
@@ -98,6 +107,7 @@ footer {
                     grid-template-rows: repeat(2, 1fr);
                     grid-gap: 1rem; 
                     margin-left: 6rem;
+                    max-width: 500px;
                 }
                 
                 img {
@@ -114,9 +124,16 @@ footer {
                     display: flex;
                     margin-top: auto;
                     object-fit: contain;
+                    width: auto;
                 }
-                @media only screen and (max-width: $xl) { 
-                    .download-pdf {
+                .download-pdf {
+                    width: 100%;
+                    padding-block: 1.75rem;
+                    @media only screen and (min-width: $xs) { 
+                        padding-block: 1.5rem;
+                        width: auto;
+                    }
+                    @media only screen and (max-width: $xl) { 
                         height: 100%;
                         padding-inline: 1.75rem;
                     }
