@@ -54,7 +54,7 @@ main#content {
             font-size: 56px;
         }
 
-        @media only screen and (min-width: $xl) {
+        @media only screen and (min-width: $xxl) {
             margin-bottom: 10rem;
         }
     }
@@ -65,7 +65,7 @@ main#content {
         flex-direction: row-reverse;
         margin-top: 4rem;
 
-        @media only screen and (min-width: $xl) {
+        @media only screen and (min-width: $xxl) {
             .startseite & {
                 margin-top: -6rem;
             }
@@ -102,7 +102,7 @@ main#content {
         .content_container {
             background-color: $clr_main_light;
             display: flex; 
-            gap: 2rem;
+            //gap: 2rem;
             width: 80%;
             border-radius: 25px;
             padding-inline: 2rem;
@@ -113,17 +113,19 @@ main#content {
 
             .startseite & {
                 width: 100%;
+
+                @media only screen and (min-width: $xl) {
+                    width: 71%;
+                }
+
+                @media only screen and (min-width: $xxl) {
+                    width: 45%;
+                }
             }
 
             @media only screen and (min-width: $m) {
                 flex-direction: row-reverse;
                 padding: 2rem;
-            }
-
-            @media only screen and (min-width: $xl) {
-                .startseite & {
-                    width: 45%;
-                }
             }
 
             .content-left {
