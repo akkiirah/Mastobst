@@ -10,21 +10,64 @@ Klicken Sie auf den grünen Knopf "Code" und wählen Sie anschließend im Dropdo
 
 ### Schritt 3
 
-Herunterladen der Extension 'Live Server':
-https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+Herunterladen der Extension '[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)'
+
 
 ### Schritt 4
 
-Navigieren Sie innerhalb von Visual Studio Code auf die index.html (public_html/html/index.html)
-Zuletzt klicken Sie auf "Go Live" am unteren rechten Bildschirmrand.
-Hiermit öffnet sich nun ein Browserfenster mit der Startseite. Nun können Sie wie gewünscht auf den Seiten navigieren.
+Navigieren Sie innerhalb von Visual Studio Code auf die index.html (public_html/html/index.html)<br>
+Zuletzt klicken Sie auf "Go Live" am unteren rechten Bildschirmrand.<br>
+(Falls dieser Knopf nicht da ist, versuchen Sie einmal VSCode neuzustarten)<br>
+Hiermit öffnet sich nun ein Browserfenster mit der Startseite. Nun können Sie wie gewünscht auf den Seiten navigieren.<br>
+
+<br>
 
 ## Mögliche Fehler
 
 ### Bilder werden nicht angezeigt
 
-Hier haben Sie den falschen Ordner geöffnet, weshalb die Pfade von den Bildern oder auch Dateien nicht mehr korrekt abgerufen werden können.
-Stellen Sie sicher, dass Sie den Ordner mit dem Namen 'Mastobst-main' öffnen und in Visual Studio Code der erste Ordner 'public_html' ist.
+Hier haben Sie den falschen Ordner geöffnet, weshalb die Pfade von den Bildern oder auch Dateien nicht mehr korrekt abgerufen werden können.<br>
+Stellen Sie sicher, dass Sie den Ordner mit dem Namen 'Mastobst-main' öffnen und in Visual Studio Code der erste Ordner 'public_html' ist.<br>
+
+<br>
+<br>
+
+## SCSS Anpassungen
+
+Da wir den CSS pre-processor SCSS verwenden, ist zum Bearbeiten eine weitere Extension in VSCode zzgl. config Anpassung notwendig.<br>
+Folgende Schritte sind notwendig um, dass Änderungen in eine einzelne main.css komprimiert werden. Diese CSS-Datei ist auf jeder Seite eingebunden.<br>
+Ohne diese Schritte würden von den einzelnen SCSS Dateien gleichnamige CSS Dateien erstellt werden, welche nicht eingebunden werden.<br>
+
+### Schritt 1
+
+Herunterladen der Extension '[Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)'
+
+### Schritt 2
+
+Klicken Sie in VSCode unten links auf das Zahnrad und wählen Sie 'settings' oder 'Einstellungen' je nach Sprache.<br>
+Suchen Sie nun in der oberen Leiste nach 'liveSassCompile.settings.formats' und klicken Sie beim ersten Suchergebnis auf 'Edit in settings.json'.<br>
+
+### Schritt 3
+
+Nun müssen Sie hier noch folgendes json einfügen und dann abspeichern:
+```
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".css",
+      "savePath": "~/../css",
+      "savePathReplacementPairs": null
+    }
+  ]
+```
+
+### Schritt 4
+
+Zuletzt muss in der Leiste unten, wo Sie auch auf 'Go Live' zum Server starten geklickt haben auf 'Watch Sass' geklickt werden.<br>
+(Falls dieser Knopf nicht da ist, versuchen Sie einmal VSCode neuzustarten)<br>
+Nun wird einmal der gesamte SCSS Inhalt kompiliert und darauffolgende Änderungen automatisch kompiliert.<br>
+
+<br>
 
 ## Quellenangaben
 
