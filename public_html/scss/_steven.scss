@@ -1,35 +1,11 @@
-fieldset {
-    width: 100%;
+.registerForm {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-gap: 5px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
-form {
-    font-size: xx-large;
-
-    .buttons {
-        font-size: xx-large;
-    }
-
-    .fields {
-        font-size: xx-large;
-    }
-
-    option {
-        font-size: xx-large;
-    }
-
-    .check {
-        height: 25px;
-        width: 25px;
-    }
+.section_h1 {
+    text-align: center;
 }
-
-.register_form{
-    margin-top: 4rem;
-}
-
-.field_container{
-    background-color: $clr_main_light;
-    border-radius: 2.5%;
-    border-style: none;
-}
-

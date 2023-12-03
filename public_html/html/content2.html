@@ -8,7 +8,8 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css"/>
 </head>
 
-<body class="steven">
+<body>
+    <script src="/public_html/js/steven.js"></script>
     <header id="header" class="wrap_center">
         <div class="logo">
             <img class="logo_inner" src="/public_html/img/Sie_wissen_nicht_was_das_fuer_ein_auffwand_war_2.png.png" />
@@ -48,13 +49,15 @@
         <div class="content_wrap">
             <div class="content_container">
                 <div class="content-left">
-                    <h2 class="content_title">Ihre Vorteile</h2>
-                    <p class="content_desc">Erhalten Sie regelmäßig Informationen über
-                                            neue Produkte in unserem Onlineshop</p> 
+                    <h2 class="content_title">Exklusive Produktinformationen</h2>
+                    <p class="content_desc">Erhalten Sie als registrierter Neukunde exklusiven Zugang 
+                                            zu Informationen über unsere neuesten Produkte. 
+                                            Seien Sie der Erste, der von frischen Obstlieferungen, 
+                                            saisonalen Spezialitäten und Sonderangeboten erfährt</p> 
                 </div>
                 <div class="content-right">
                     <div class="content_image_wrap">
-                        <img class="content_image" src="/public_html/img/banner/dummy2.jpg" alt="Vorteile">
+                        <img class="content_image" src="/public_html/img/exclusiveProduktinfos.png" alt="Vorteile">
                     </div>
                 </div>
             </div>
@@ -63,12 +66,15 @@
         <div class="content_wrap">
             <div class="content_container">
                 <div class="content-left">
-                    <h2 class="content_title">Ihre Vorteile 2</h2>
-                    <p class="content_desc">Weitere Vorteile...</p>
+                    <h2 class="content_title">Persönliche Angebote und Rabatte</h2>
+                    <p class="content_desc">Genießen Sie maßgeschneiderte Angebote und exklusive Rabatte, 
+                                            die speziell auf Ihre Vorlieben und Bedürfnisse zugeschnitten sind. 
+                                            Als registrierter Kunde profitieren Sie von individuellen Aktionen, 
+                                            die Ihren Einkauf bei Mast Obst noch attraktiver machen</p>
                 </div>
                 <div class="content-right">
                     <div class="content_image_wrap">
-                        <img class="content_image" src="/public_html/img/banner/dummy2.jpg" alt="weitere Vorteile">
+                        <img class="content_image" src="/public_html/img/personalAngebote.png" alt="weitere Vorteile">
                     </div>
                 </div>
             </div>
@@ -77,77 +83,56 @@
         <div class="content_wrap">
             <div class="content_container">
                 <div class="content-left">
-                    <h2 class="content_title">Ihre Vorteile 3</h2>
-                    <p class="content_desc">Noch mehr Vorteile...</p>
+                    <h2 class="content_title">Schnellere und Bequemere Bestellabwicklung</h2>
+                    <p class="content_desc">Sparen Sie Zeit bei der Bestellabwicklung! 
+                                            Mit einem Kundenkonto können Sie Ihre Lieblingsprodukte speichern, 
+                                            vergangene Bestellungen einsehen und den Checkout-Prozess beschleunigen. 
+                                            Erleben Sie eine reibungslose und bequeme Online-Shopping-Erfahrung.</p>
                 </div>
                 <div class="content-right">
                     <div class="content_image_wrap">
-                        <img class="content_image" src="/public_html/img/banner/dummy2.jpg" alt="Noch mehr Vorteile">
+                        <img class="content_image" src="/public_html/img/bequemBestellen.png" alt="Noch mehr Vorteile">
                     </div>
                 </div>
             </div>
         </div>
-        
+    
 
-        <div class="register_form">
-            <center>
-                <form>
-                    <fieldset class="wrap_center field_container" >
-    
-                        <legend>Anmeldung</legend>
-                        
-                        <br>
-    
-                        <label for="name">Name</label>
-                        <input id="name" name="vorname" type="text" class="fields" required>
-    
-                        <br>
-                        <br>
-    
-                        <label for="lastname">Nachname</label>
-                        <input id="lastname" name="nachname" type="text" class="fields" required>
-    
-                        <br>
-                        <br>
-    
-                        <label for="mail">E-Mail Adresse</label>
-                        <input id="mail" name="email" type="email" class="fields" required>
-    
-                        <br>
-                        <br>
-    
-                        <label for="birthdate">Geburtsdatum</label>
-                        <input id="birthdate" name="geburtstag" type="date" class="fields" required>
-    
-                        <br>
-                        <br>
-    
-                        <label for="news">Ich wünsche regelmäßig über Neuigkeiten per E-Mail informiert zu werden</label>
-                        <input id="news" name="newsletter" type="checkbox" class="check">
-    
-                        <br>
-                        <br>
-    
-                        <span  class="fields">Kundentyp</span>
-                        <select  class="fields">
-                            <option>Privatkunde</option>
-                            <option>Firmenkunde</option>
-                        </select>
-    
-                        <br>
-                        <br>
-    
-                        <label for="password">Passwort</label>
-                        <input id="password" name="passwort" type="password" class="fields" pattern="[A-Za-z0-9]{8}" placeholder="8 Zeichen langes Passwort" required>
-    
-                        <br>
-                        <br>
-    
-                        <button id="submit_button" type="" value="Anmelden" class="buttons">Anmelden</button>
-                    </fieldset>
-                </form>
-            </center>
-        </div>
+        <!-- Anmeldeformular Neukunden -->
+        <section class="registerFom">
+            <form class="register_form" action="">
+                <h1 class="section_h1">Anmelden</h1>
+                <div class="field_container" id="tab_1">Name:
+                    <p><select>
+                        <option>Herr</option>
+                        <option>Frau</option>
+                    </select></p>
+                    <p><input type="text" placeholder="*Vorname" required></p>
+                    <p><input type="text" placeholder="*Nachname" required></p>
+                    <button type="submit" id="switch_to_contact_button">Weiter</button>
+                </div>
+                    
+                <div class="field_container" id="tab_2">Kontaktinformationen:   
+                    <p><input type="email" placeholder="*Email-Adresse" required></p>   
+                    <p><input type="tel" placeholder="Telefonnummer"></p>
+                    <p><input type="text" placeholder="Strasse"></p>
+                    <p><input type="number" placeholder="Hausnummer"></p>
+                    <p><input type="text" placeholder="Postleitzahl"></p>
+                    <p><input type="text" placeholder="Ort"></p>
+                    <button type="button" id="back_to_name_button">Zurück</button>
+                    <button type="submit" id="switch_to_register_button">Weiter</button>   
+                </div>
+
+                <div class="field_container" id="tab_3">Registrierung:
+                    <p><input type="text" placeholder="*Benutzername" required></p>
+                    <p><input type="password" placeholder="*Passwort" pattern="[A-Za-z0-9]" required></p>
+                    <p><label>Ich wünsche regelmäßig über Neuigkeiten per E-Mail informiert zu werden</label>
+                    <input type="checkbox"></p>
+                    <button type="button" id="back_to_contact_button">Zurück</button>
+                    <button type="submit" id="finish_register_button">Registrieren</button>
+                </div>
+            </form>
+        </section>
     </main>
 
     <footer>
