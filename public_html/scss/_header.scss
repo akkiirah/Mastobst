@@ -156,7 +156,7 @@
                 display: none;
             }
             padding-block: 1.25rem;
-            background-color: #292929b4;
+            background-color: #111111b4;
             flex-direction: column;
             gap: 2rem;
             position: absolute;
@@ -165,23 +165,24 @@
             height: 100dvh;
             width: calc(100dvw - .5rem);
             align-items: center;
-            transition: transform 750ms ease;
+            transition: transform 750ms ease, height 250ms ease;
             box-shadow: $box_shadow-main; 
 
-            .scroll {
-                height: 100dvh;
-            }
     
             &.mobile_open { transform: translateX(0); }
             &.mobile_hidden { transform: translateX(105%); }
     
             @media only screen and (min-width: $xs) {
-                width: 18rem;
+                width: 24rem;
                 right: -1rem;
                 top: 0;
                 height: 97dvh;
                 border-bottom-left-radius: 30px;
                 border-top-left-radius: 30px;
+            }
+            
+            .scroll & {
+                height: 100dvh;
             }
     
             #mobile_close {
