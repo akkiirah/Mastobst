@@ -22,7 +22,9 @@ if (buyButton) {
     buyButton.addEventListener("click", notifyBought);
 }
 
-notificationClose.addEventListener("click", closeNotificationContainer);
+if (notificationClose) {
+    notificationClose.addEventListener("click", closeNotificationContainer);
+}
 
 function moveItems() {
     let button = this;
