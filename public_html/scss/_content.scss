@@ -5,16 +5,28 @@
 main#content {
     margin-top: 14rem;
     margin-bottom: 8rem;
-    padding-inline: 6rem;
+    padding-inline: 3rem;
     color: $clr_second;
     position: relative;
+
+    @media only screen and (min-width: $l) {
+        padding-inline: 4rem;
+    }
+
+    @media only screen and (min-width: $xl) {
+        padding-inline: 6rem;
+    }
 
     .startseite &::after {
         content: '';
         position: absolute;
-        /* Muss man überprüfen
+<<<<<<< HEAD
+        
         background: linear-gradient(0deg, $clr_main_dark 0%, rgba(255, 255, 255, 0) 100%);
-        */
+        
+=======
+        background: linear-gradient(0deg, $clr_main_dark 0%, rgba(255, 255, 255, 0) 100%);
+>>>>>>> 0f04a0946a7513e716f93699066530809866d58b
         width: 100%;
         height: 50%;
         bottom: 4rem;
@@ -28,11 +40,27 @@ main#content {
         top: 0;
         right: calc(33% - 7.5rem);
         transform: translateX(50%);
+
+        @media only screen and (max-width: $l) {
+            display: none;
+        }
     }    
 
     .main_title {
-        font-size: 56px;
-        margin-bottom: 10rem;
+        font-size: $font_size-l;
+        margin-bottom: 2rem; 
+
+        @media only screen and (min-width: $xs) {
+            font-size: $font_size-xxl;
+        }
+
+        @media only screen and (min-width: $m) {
+            font-size: 56px;
+        }
+
+        @media only screen and (min-width: $xxl) {
+            margin-bottom: 10rem;
+        }
     }
 
     .content_wrap {
@@ -41,33 +69,34 @@ main#content {
         flex-direction: row-reverse;
         margin-top: 4rem;
 
-        
-        .startseite & {
-            margin-top: -6rem;
+        @media only screen and (min-width: $xxl) {
+            .startseite & {
+                margin-top: -6rem;
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
         }
-
-        &:first-child {
-            margin-top: 0;
-        }
-
-
     
-        &:nth-of-type(2n) {
-            flex-direction: row;
+        @media only screen and (min-width: $m) {
+            &:nth-of-type(2n) {
+                flex-direction: row;
 
-            .content_container {
-                flex-direction: row; 
-                justify-content: space-between;
-                
-                .content-left { 
-                    padding-right: 0; padding-left: 2rem;
-                }
+                .content_container {
+                    flex-direction: row; 
+                    justify-content: space-between;
+                    
+                    .content-left { 
+                        padding-right: 0; padding-left: 2rem;
+                    }
 
-                .content-right {
-                    justify-content: flex-end;
-                    .content_image_wrap {
-                        .content_image {
-                            filter: drop-shadow(.75rem .5rem .5rem $clr_main_dark);
+                    .content-right {
+                        justify-content: flex-end;
+                        .content_image_wrap {
+                            .content_image {
+                                filter: drop-shadow(.75rem .5rem .5rem $clr_main_dark);
+                            }
                         }
                     }
                 }
@@ -77,36 +106,83 @@ main#content {
         .content_container {
             background-color: $clr_main_light;
             display: flex; 
-            gap: 2rem;
+            //gap: 2rem;
             width: 80%;
             border-radius: 25px;
-            padding: 2rem;
-            flex-direction: row-reverse;
+            padding-inline: 2rem;
+            padding-block: 0rem;
+            flex-direction: row;
             justify-content: space-between;
             box-shadow: 0 0 1rem 1px rgba(37,37,38,0.75); 
 
             .startseite & {
-                width: 45%;
+                width: 100%;
+
+                @media only screen and (min-width: $xl) {
+                    width: 71%;
+                }
+
+                @media only screen and (min-width: $xxl) {
+                    width: 45%;
+                }
+            }
+
+            @media only screen and (min-width: $m) {
+                flex-direction: row-reverse;
+                padding: 2rem;
             }
 
             .content-left {
-                width: 66%;
+                width: 100%;
                 padding-block: 2rem;
                 padding-right: 2rem;
                 display: flex;
                 flex-direction: column;
 
-                .startseite & {
-                    width: 33%;
+                @media only screen and (min-width: $xs) {
+                    width: 66%;
+                }
+
+                @media only screen and (min-width: $m) {
+                    .startseite & {
+                        width: 33%;
+                    }
+                }
+
+                @media only screen and (min-width: $xl) {
+                    .startseite & {
+                        width: 60%;
+                    }
+                }
+
+                @media only screen and (min-width: $xxl) {
+                    .startseite & {
+                        width: 33%;
+                    }
                 }
 
                 .content_title {
-                    font-size: 3rem; 
+                    font-size: $font_size-xl;
                     margin-bottom: .5rem;
+
+                    @media only screen and (min-width: $xs) {
+                        font-size: 3rem; 
+                    }
+
+                    @media only screen and (min-width: $xl) {
+                        font-size: 2.5rem; 
+                    }
+                    @media only screen and (min-width: $xxl) {
+                        font-size: 3rem; 
+                    }
                 }
                 .content_desc {
                     font-size: 1.25rem;
-                    margin-bottom: auto;
+                    margin-bottom: 2rem;
+
+                    @media only screen and (min-width: $xs) {
+                        margin-bottom: auto;
+                    }
                 }
                 .content_learn_more {
                     width: fit-content;
@@ -126,12 +202,30 @@ main#content {
             }
     
             .content-right {
-                display: flex;
-                justify-content: flex-start;
+                justify-content: flex-end;
                 width: 33%;
+                display: none;
 
-                .startseite & {
-                    width: 66%;
+                @media only screen and (min-width: $xs) {
+                    display: flex;
+                }
+                @media only screen and (min-width: $m) {
+                    justify-content: flex-start;
+                    .startseite & {
+                        width: 66%;
+                    }
+                }
+
+                @media only screen and (min-width: $xl) {
+                    .startseite & {
+                        width: 40%;
+                    }
+                }
+
+                @media only screen and (min-width: $xxl) {
+                    .startseite & {
+                        width: 66%;
+                    }
                 }
 
                 .content_image_wrap {

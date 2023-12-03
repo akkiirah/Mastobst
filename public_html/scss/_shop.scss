@@ -1,17 +1,34 @@
 #shop_wrap {
     display: flex;
     gap: 3rem;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+
+    @media only screen and (min-width: $l) {
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
 
     #shop_items-wrap {
         background-color: $clr_main_darker;
         border: 1px solid $clr_main_light;
         border-radius: 1.25rem;
-        width: 66%;
+        width: 100%;
         padding: 1rem;
         height: fit-content;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+
+        @media only screen and (min-width: $s) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media only screen and (min-width: $m) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media only screen and (min-width: $l) {
+            grid-template-columns: repeat(2, 1fr);
+            width: 66%;
+        }
         @media only screen and (min-width: $xl) {
             grid-template-columns: repeat(3, 1fr);
         }
@@ -31,10 +48,18 @@
         background-color: $clr_main;
         border-radius: .75rem;
         transition: opacity 250ms ease, transform 250ms ease-in-out; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
 
         .shop_item-title {
             text-align: center;
-            margin-bottom: 1rem; 
+            margin-bottom: .25rem; 
+        }
+
+        .shop_item_price-wrap {
+            margin-inline: auto;
+            margin-bottom: 1.25rem;
         }
 
         .shop_item_image-wrap {
@@ -86,23 +111,46 @@
         background-color: $clr_main_darker;
         border: 1px solid $clr_main_light;
         border-radius: 1.25rem;
-        width: 33%;
+        width: 100%;
         position: relative;
-        height: 22rem;
+        height: 27rem;
         transition: all 250ms ease;
-        padding-bottom: 6rem;
+        padding-bottom: 8rem;
+
+        @media only screen and (min-width: $l) {
+            width: 33%;
+        }
 
         #shop_cart-content {
             display: grid; 
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 1rem;
-
+            @media only screen and (min-width: $xs) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
             @media only screen and (min-width: $l) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            @media only screen and (min-width: $xl) {
                 grid-template-columns: repeat(2, 1fr);
             }
             
             padding: 1rem;
         }
+
+        .shop_cart_balance-wrap {
+            position: absolute;
+            bottom: calc(2rem + 2rem + 20px);
+            left: 1rem;
+
+            .shop_cart-balance,
+            #shop_cart-balance,
+            > span {
+                font-size: $font_size-l;
+            }
+        }
+
 
         #shop_cart-buy {
             position: absolute;
@@ -111,13 +159,136 @@
             padding-inline: 2rem;
             padding-block: 1rem;
             background-color: $clr_color;
-            font-size: 20px;
+            font-size: $font_size-xs;
             width: calc(100% - 2rem);
             transform: translateX(50%);
 
+            @media only screen and (min-width: $xs) {
+                font-size: $font_size-m;
+            }
+
+            @media only screen and (min-width: $xl) {
+                font-size: 20px;
+            }
+            
             &:hover {
                 background-color: $clr_color-darker;
             }
         }
     }
 }
+
+#notification_container-background {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.253);
+    transition: backdrop-filter 550ms ease, opacity 550ms ease;
+    z-index: 101;
+    opacity: 0;
+    display: none;
+
+    #notification_container-wrap {
+        padding: 2rem;
+        width: calc(100% - 6rem);
+        height: auto;
+        background-color: #1b1b1cdf;
+        border: 1px solid $clr_second_darker;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        color: $clr_second;
+        border-radius: 1.25rem;
+
+        
+        @media only screen and (min-width: $m) {
+            width: 66%;
+            padding-inline: 4rem;
+            padding-block: 3rem;
+        }
+
+        #notification_container-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 3rem;
+            height: 3rem;
+            background-color: $clr_color;
+            background-position: center center;
+            transform: 
+            scale(0)
+            translate(50%, -50%);
+            transition: 
+            background 250ms ease,
+            transform 750ms ease;
+
+            &:hover {
+                transform: translate(45%, -45%);
+                background-color: $clr_color-darker;
+            }
+        }
+
+        .notification_container-text { 
+            font-size: $font_size-m;
+            @media only screen and (min-width: $s) {
+                font-size: $font_size-l;
+            }
+            @media only screen and (min-width: $m) {
+                font-size: $font_size-xl;
+            }
+            
+            &:first-of-type {
+                padding-bottom: .75rem;
+                border-bottom: 1px solid $clr_color;
+                margin-bottom: 1.5rem;
+            }
+            &:last-of-type {
+                display: inline;
+                margin-bottom: .75rem;
+            }
+        }
+        .notification_container_items-wrap {
+            display: flex;
+
+            #notification_container-items { margin-right: 5rem;}
+
+            #notification_container-items,
+            #notification_container-items-2 {
+                font-size: $font_size-m;
+                @media only screen and (min-width: $s) {
+                    font-size: $font_size-l;
+                }
+                margin-bottom: 4rem;
+                line-height: 1.2;
+            }
+        }
+
+        #notification_container-price {
+            display: inline-flex;
+            transform: scale(0);
+            transition: 
+            transform 450ms ease,
+            border-bottom 250ms ease;
+            border-bottom: 1px solid transparent;
+
+            font-size: $font_size-l;
+            @media only screen and (min-width: $m) {
+                font-size: $font_size-xl;
+            }
+            @media only screen and (min-width: $l) {
+                font-size: $font_size-xxl;
+            }
+        }
+    }
+}
+
+
+
+
+

@@ -3,8 +3,17 @@ let shopButtons = document.querySelectorAll('.shop_item-add');
 const shopCartContainer = document.getElementById('shop_cart-content');
 const shopItemsContainer = document.getElementById('shop_items-wrap');
 const buyButton = document.getElementById('shop_cart-buy');
+const balanceContainer = document.getElementById('shop_cart-balance');
+
+let notificationItemsText = document.getElementById('notification_container-text')
+let notificationItemsContainer = document.getElementById('notification_container-items');
+let notificationItemsContainer2 = document.getElementById('notification_container-items-2');
+let notificationPriceContainer = document.getElementById('notification_container-price');
+const notificationBackground = document.getElementById('notification_container-background');
+const notificationClose = document.getElementById('notification_container-close');
 
 let cooldown = false;
+let balance = 0;
 
 shopButtons.forEach(shopButton => {
     shopButton.addEventListener("click", moveItems);
@@ -12,6 +21,10 @@ shopButtons.forEach(shopButton => {
 
 if (buyButton) {
     buyButton.addEventListener("click", notifyBought);
+}
+
+if (notificationClose) {
+    notificationClose.addEventListener("click", closeNotificationContainer);
 }
 
 function moveItems() {
@@ -38,19 +51,15 @@ function addToCart(item, button) {
             button.innerHTML = "- entfernen";
             item.classList.add('in_cart');
             checkRemainingItems();
+            updateBalance();
         }, 350);
     
-        window.setTimeout(function() {
-            item.style.transform = "scale(1.2)";
-            item.style.opacity = "1";
-        }, 450);
-    
-        console.log(cooldown);
+        window.setTimeout(function() { item.style.transform = "scale(1.2)"; }, 450);
     
         window.setTimeout(function() {
-            window.setTimeout(function() {item.style.transform = "scale(1)";}, 100);
+            item.style.transform = "scale(1)";
             cooldown = false;
-        }, 550);
+        }, 650);
 }
 
 function removeFromCart(item, button) {
@@ -69,21 +78,18 @@ function removeFromCart(item, button) {
         button.innerHTML = "+ hinzufügen";
         item.classList.remove('in_cart');
         checkRemainingItems();
+        updateBalance();
     }, 350);
 
-    window.setTimeout(function() {
-        item.style.transform = "scale(1.2)";
-        item.style.opacity = "1";
-    }, 450);
+    window.setTimeout(function() { item.style.transform = "scale(1.2)"; }, 450);
 
     window.setTimeout(function() {
-        window.setTimeout(function() {item.style.transform = "scale(1)";}, 100);
+        item.style.transform = "scale(1)";
         cooldown = false;
-    }, 550);
+    }, 650);
 }
 
 function checkRemainingItems() {
-    console.log("checked");
 
     if(shopItemsContainer.childElementCount > 3 && shopItemsContainer.childElementCount < 10 ) { 
         shopItemsContainer.style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
@@ -112,26 +118,132 @@ function checkRemainingItems() {
 
 function changeContainerHeight(item) {
     let gap = 16;
+    let scrollbar = 12;
     let currentHeight = shopCartContainer.parentNode.offsetHeight;
-
-
-    if(item.parentNode == shopCartContainer) {
-        if (shopCartContainer.childElementCount % 2 == 1 && shopCartContainer.childElementCount > 1) {
-            shopCartContainer.parentNode.style.height = currentHeight - item.offsetHeight - gap + "px";
+    if(document.body.clientWidth >= (1024-scrollbar) && document.body.clientWidth <= (1279-scrollbar) || document.body.clientWidth >= 0 && document.body.clientWidth <= (479-scrollbar)) {
+        if(item.parentNode == shopCartContainer) {
+            if (shopCartContainer.childElementCount >= 2) { 
+                shopCartContainer.parentNode.style.height = currentHeight - item.offsetHeight - gap + "px";
+            }
+        } else {
+            if (shopCartContainer.childElementCount % 1 == 0 && shopCartContainer.childElementCount >= 1) {
+                shopCartContainer.parentNode.style.height = currentHeight + item.offsetHeight + gap + "px";
+            }
         }
-    } else {
-        if (shopCartContainer.childElementCount % 2 == 0 && shopCartContainer.childElementCount > 1) {
-            shopCartContainer.parentNode.style.height = currentHeight + item.offsetHeight + gap + "px";
+    }
+    else {
+        if(item.parentNode == shopCartContainer) {
+            if (shopCartContainer.childElementCount % 2 == 1 && shopCartContainer.childElementCount > 1) {
+                shopCartContainer.parentNode.style.height = currentHeight - item.offsetHeight - gap + "px";
+            }
+        } else {
+            if (shopCartContainer.childElementCount % 2 == 0 && shopCartContainer.childElementCount > 1) {
+                shopCartContainer.parentNode.style.height = currentHeight + item.offsetHeight + gap + "px";
+            }
         }
     }
 }
 
 function notifyBought() {
-    let items = "";
+    notificationBackground.style.display = 'block';
+    notificationBackground.style.opacity = '1';
+
+    window.setTimeout(function() {
+        notificationBackground.style.backdropFilter  = 'blur(.5em)';
+    }, 100);
+
+    window.setTimeout(function() {
+        notificationClose.style.transform  = 'scale(1) translate(50%, -50%)';
+    }, 2000);
+
+    if(shopCartContainer.childElementCount <= 0) { 
+        notificationItemsText.innerHTML = "Es sind keine Gegenstände im Warenkorb."
+        notificationPriceContainer.innerHTML = "0.00€";
+        notifyPrice(); 
+        return;
+    }
+    else { notificationItemsText.innerHTML = "Sie haben folgende Gegenstände gekauft:" }
+
+    notificationPriceContainer.innerHTML = balance + "€";
+    for (let i = 0; i < shopCartContainer.childElementCount; i++) {
+
+        window.setTimeout(function() {
+            if (i < 15) {
+                let item = shopCartContainer.children[i].firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.innerHTML + "€ " + "‎ ‎ ‎ ‎ " + shopCartContainer.children[i].firstElementChild.nextElementSibling.innerHTML ;
+                notificationItemsContainer.innerText += "ー " + item + "\n"; 
+            }
+            else {
+                let item = shopCartContainer.children[i].firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.innerHTML + "€ " + "‎ ‎ ‎ ‎ " + shopCartContainer.children[i].firstElementChild.nextElementSibling.innerHTML ;
+                notificationItemsContainer2.innerText += "ー " + item + "\n"; 
+            }
+
+            if(i == shopCartContainer.childElementCount -1) { 
+                window.setTimeout(function() {
+                    notifyPrice(); 
+                }, 500);
+            }
+
+        }, 500 * (i+1));
+    }
+}
+
+function notifyPrice() {
+    window.setTimeout(function() {
+        notificationPriceContainer.style.transform  = 'scale(2)';
+    }, 100);
+
+    window.setTimeout(function() {
+        notificationPriceContainer.style.transform  = 'scale(.7)';
+    }, 400);
+
+    window.setTimeout(function() {
+        notificationPriceContainer.style.transform  = 'scale(1.5)';
+    }, 600);
+
+    window.setTimeout(function() {
+        notificationPriceContainer.style.transform  = 'scale(1)';
+    }, 700);
+
+    window.setTimeout(function() {
+        notificationPriceContainer.style.borderBottom = '1px solid #8C271E';
+    }, 1000);
+}
+
+function updateBalance() {
+    balance = 0;
+    // Funktioniert auch, ist aber wahrscheinlich langsamer.
+    //
+    // let items = document.querySelectorAll('.shop_item-price');
+    // items.forEach(item => {
+    //     if(item.parentElement.parentElement.parentElement == shopCartContainer) {
+    //         console.log(item.innerHTML);
+    //     }
+    // });
+    
 
     for (let i = 0; i < shopCartContainer.childElementCount; i++) {
-        items = items + " " + shopCartContainer.children[i].firstElementChild.nextElementSibling.innerHTML + ","; 
+        let itemPriceString = shopCartContainer.children[i].firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.innerHTML;
+        let itemPrice = parseFloat(itemPriceString); 
+        balance += itemPrice;
     }
-    
-    alert("Sie haben " + shopCartContainer.childElementCount + " Gegenstände gekauft.\n" + "Folgende Gegenstände wurden bestellt: " + items);
+
+    balanceContainer.innerHTML = balance.toFixed(2);
+    balance = balance.toFixed(2);
+}
+
+function closeNotificationContainer() {
+    notificationBackground.style.backdropFilter  = 'blur(0)';
+    notificationBackground.style.opacity = '0';
+
+    window.setTimeout(function() {
+        notificationClose.style.transform  = 'scale(0) translate(50%, -50%)';
+    }, 100);
+
+    window.setTimeout(function() {
+        notificationBackground.style.display = 'none';
+        notificationItemsContainer.innerText = '';
+        notificationItemsContainer2. innerText = '';
+        notificationPriceContainer.style.borderBottom = '1px solid transparent';
+        notificationPriceContainer.style.transform  = 'scale(0)';
+    }, 750);
 }
