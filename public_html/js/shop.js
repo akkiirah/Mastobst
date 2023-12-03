@@ -22,7 +22,9 @@ if (buyButton) {
     buyButton.addEventListener("click", notifyBought);
 }
 
-notificationClose.addEventListener("click", closeNotificationContainer);
+if (notificationClose) {
+    notificationClose.addEventListener("click", closeNotificationContainer);
+}
 
 function moveItems() {
     let button = this;
@@ -116,16 +118,28 @@ function checkRemainingItems() {
 
 function changeContainerHeight(item) {
     let gap = 16;
+    let scrollbar = 12;
     let currentHeight = shopCartContainer.parentNode.offsetHeight;
-
-
-    if(item.parentNode == shopCartContainer) {
-        if (shopCartContainer.childElementCount % 2 == 1 && shopCartContainer.childElementCount > 1) {
-            shopCartContainer.parentNode.style.height = currentHeight - item.offsetHeight - gap + "px";
+    if(document.body.clientWidth >= (1024-scrollbar) && document.body.clientWidth <= (1279-scrollbar) || document.body.clientWidth >= 0 && document.body.clientWidth <= (479-scrollbar)) {
+        if(item.parentNode == shopCartContainer) {
+            if (shopCartContainer.childElementCount >= 2) { 
+                shopCartContainer.parentNode.style.height = currentHeight - item.offsetHeight - gap + "px";
+            }
+        } else {
+            if (shopCartContainer.childElementCount % 1 == 0 && shopCartContainer.childElementCount >= 1) {
+                shopCartContainer.parentNode.style.height = currentHeight + item.offsetHeight + gap + "px";
+            }
         }
-    } else {
-        if (shopCartContainer.childElementCount % 2 == 0 && shopCartContainer.childElementCount > 1) {
-            shopCartContainer.parentNode.style.height = currentHeight + item.offsetHeight + gap + "px";
+    }
+    else {
+        if(item.parentNode == shopCartContainer) {
+            if (shopCartContainer.childElementCount % 2 == 1 && shopCartContainer.childElementCount > 1) {
+                shopCartContainer.parentNode.style.height = currentHeight - item.offsetHeight - gap + "px";
+            }
+        } else {
+            if (shopCartContainer.childElementCount % 2 == 0 && shopCartContainer.childElementCount > 1) {
+                shopCartContainer.parentNode.style.height = currentHeight + item.offsetHeight + gap + "px";
+            }
         }
     }
 }
