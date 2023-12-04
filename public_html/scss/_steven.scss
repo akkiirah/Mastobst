@@ -1,11 +1,20 @@
+.steven {
+    background-image: url('/public_html/img/fruit_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
 .register_form {
     display: block;
     align-items: center;
     justify-content: center;
     border-radius: 25px;
     margin-top: 5rem;
-    margin-left: 30rem;
-    margin-right: 30rem;
+    margin-inline: 15rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     background-color: $clr_main_light;
     box-shadow: 0 0 1rem 1px rgba(37,37,38,0.75); 
 }
