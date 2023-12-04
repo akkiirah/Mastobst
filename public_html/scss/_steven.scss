@@ -1,11 +1,38 @@
-.registerForm {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-gap: 5px;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+.register_form {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    margin-top: 5rem;
+    margin-left: 30rem;
+    margin-right: 30rem;
+    background-color: $clr_main_light;
+    box-shadow: 0 0 1rem 1px rgba(37,37,38,0.75); 
 }
 
-.section_h1 {
+.form_h2 {
     text-align: center;
+    font-size: 50px;
+}
+
+.field_container {
+    text-align: center;
+    font-size: 25px;
+    padding-top: 1rem;
+}
+
+
+.field_container p,
+.field_container input,
+.field_container select {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.field_container button {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
 }

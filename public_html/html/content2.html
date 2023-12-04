@@ -16,7 +16,7 @@
         </div>
         <nav id="main_menue">
             <a href="content1.html" class="sub_menue"> Shop </a>
-            <div class="sub_menue"> Menüpunkt 2</div>
+            <div class="sub_menue"> Anmeldung</div>
             <a href="content3.html" class="sub_menue"> Über Uns </a>
             <a href="content4.html" class="sub_menue"> Menüpunkt 4 </a>
         </nav>
@@ -26,7 +26,7 @@
                 <button id="mobile_close">X</button>
                 <div class="mobile_menue">
                     <a href="content1.html" class="sub_menue"> Shop </a>
-                    <div class="sub_menue"> Menüpunkt 2 </div>
+                    <div class="sub_menue"> Anmeldung </div>
                     <a href="content3.html" class="sub_menue"> Über Uns </a>
                     <a href="content4.html" class="sub_menue"> Menüpunkt 4 </a>
                 </div>
@@ -98,35 +98,35 @@
     
 
         <!-- Anmeldeformular Neukunden -->
-        <section class="registerFom">
+        <section>
             <form class="register_form" action="">
-                <h1 class="section_h1">Anmelden</h1>
-                <div class="field_container" id="tab_1">Name:
-                    <p><select>
+                <h2 class="form_h2">Anmelden</h2>
+                <div class="field_container" id="tab_1">Name
+                    <p><label>Anrede: </label><select>
                         <option>Herr</option>
                         <option>Frau</option>
                     </select></p>
-                    <p><input type="text" placeholder="*Vorname" required></p>
-                    <p><input type="text" placeholder="*Nachname" required></p>
+                    <p><label>*Vorname: </label><input type="text" placeholder="Anakin" required></p>
+                    <p><label>*Nachname: </label><input type="text" placeholder="Skywalker" required></p>
                     <button type="submit" id="switch_to_contact_button">Weiter</button>
                 </div>
                     
-                <div class="field_container" id="tab_2">Kontaktinformationen:   
-                    <p><input type="email" placeholder="*Email-Adresse" required></p>   
-                    <p><input type="tel" placeholder="Telefonnummer"></p>
-                    <p><input type="text" placeholder="Strasse"></p>
-                    <p><input type="number" placeholder="Hausnummer"></p>
-                    <p><input type="text" placeholder="Postleitzahl"></p>
-                    <p><input type="text" placeholder="Ort"></p>
+                <div class="field_container" id="tab_2">Kontaktinformationen  
+                    <p><label>*Email-Adresse: </label><input type="email" placeholder="yourmail@gmail.com" required></p>   
+                    <p><label>Telefonnummer: </label><input type="tel" placeholder="015234587686"></p>
+                    <p><label>Strasse: </label><input type="text" placeholder="Wagnerweg">
+                    <label>Hausnummer: </label><input type="number" placeholder="7"></p>
+                    <p><label>Postleitzahl: </label><input type="text" placeholder="12345">
+                    <label>Ort: </label><input type="text" placeholder="Berlin"></p>
                     <button type="button" id="back_to_name_button">Zurück</button>
                     <button type="submit" id="switch_to_register_button">Weiter</button>   
                 </div>
 
-                <div class="field_container" id="tab_3">Registrierung:
-                    <p><input type="text" placeholder="*Benutzername" required></p>
-                    <p><input type="password" placeholder="*Passwort" pattern="[A-Za-z0-9]" required></p>
-                    <p><label>Ich wünsche regelmäßig über Neuigkeiten per E-Mail informiert zu werden</label>
-                    <input type="checkbox"></p>
+                <div class="field_container" id="tab_3">Registrierung
+                    <p><label>*Benutzername: </label><input type="text" placeholder="babobeat123" required></p>
+                    <p><label>*Email-Adresse: </label><input type="password" placeholder="starkes Passwort" pattern="[A-Za-z0-9]" required></p>
+                    <p><input type="checkbox">
+                    <label>Ich wünsche regelmäßig über Neuigkeiten per E-Mail informiert zu werden</label></p>
                     <button type="button" id="back_to_contact_button">Zurück</button>
                     <button type="submit" id="finish_register_button">Registrieren</button>
                 </div>
