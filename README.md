@@ -117,3 +117,27 @@ Nun wird einmal der gesamte SCSS Inhalt kompiliert und darauffolgende Änderunge
     https://shop.rewe.de/c/trauben/
     https://www.riccardo-zigarette.de/Riccardo-Aroma-Melone-Wassermelone-10-ml
     https://www.riccardo-zigarette.de/Riccardo-Aroma-Zitrone-10-ml
+
+ ### Über uns ###
+Zwei Bilder von Teams, die der Lehrer für uns bereitgestellt hat. von mir photoshopt
+https://www.jurassicfruit.com/de/p952/entdeckerbox-exotische-fruchte
+https://cdn.jurassicfruit.com/static/images/how-it-works/customer.jpg?t=1701370845
+https://cdn.jurassicfruit.com/static/selfies/180/Selfie22.jpg?t=1663222703
+https://cdn.jurassicfruit.com/static/selfies/180/Selfie25.jpg?t=1663222703
+https://www.fruiton.de/media/pages/home/modules/obst-lieferservice/dae0c32cf7-1693830392/von-vorne-80x.png
+https://www.fruiton.de/media/pages/home/modules/obst-lieferservice/bcc9570680-1693828911/premium-obstkorb-80x.png
+https://www.fruiton.de/media/pages/home/modules/obst-lieferservice/d0cec87e3c-1693828477/kostenlose-obstlieferung-80x.png
+https://www.fruiton.de/media/pages/home/modules/obst-lieferservice/fd8b93104d-1693828223/obst-bestellung-80x.png
+
+
+### banner##
+https://www.pexels.com/de-de/foto/flatlay-fotografie-von-fruchten-1334131/
+https://www.pexels.com/de-de/foto/fashion-person-frau-einkaufen-9811155/
+https://www.pexels.com/de-de/foto/gesund-suss-farbe-frucht-4113802/
+https://www.pexels.com/de-de/foto/gesund-saat-suss-farbe-4113826/
+https://www.pexels.com/photo/assorted-fruits-on-brown-woven-basket-6707512/
+https://www.pexels.com/photo/person-holding-a-basket-of-fruits-6707511/
+
+##footer ##
+https://cdn.jurassicfruit.com/static/images/google-rating.png?t=1701370845
+https://cdn.jurassicfruit.com/static/images/ekomi-rating.png?t=1701370845
