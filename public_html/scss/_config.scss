@@ -174,3 +174,53 @@ body {
   ::-webkit-scrollbar-thumb:hover {
     background: $clr_second_darker;
   }
+
+ 
+
+body.creative_about_page {
+    background-color: #fff6e5;
+}
+
+.creative_about_container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.creative_about_image_wrapper {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    width: 45%;
+    border-radius: 8px;
+}
+
+.creative_about_image {
+    width: 100%;
+    height: 200px; /* Ändere die Höhe nach Bedarf */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.creative_about_image:hover {
+    transform: scale(1.1);
+}
+
+.creative_about_text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(140, 39, 30, 0.8); 
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
