@@ -12,7 +12,9 @@
     <script src="/public_html/js/steven.js"></script>
     <header id="header" class="wrap_center">
         <div class="logo">
-            <img class="logo_inner" src="/public_html/img/Sie_wissen_nicht_was_das_fuer_ein_auffwand_war_2.png.png" />
+            <a href="index.html">
+                <img class="logo_inner" src="/public_html/img/Sie_wissen_nicht_was_das_fuer_ein_auffwand_war_2.png.png" />
+            </a>
         </div>
         <nav id="main_menue">
             <a href="content1.html" class="sub_menue"> Shop </a>
@@ -101,32 +103,32 @@
         <section>
             <form class="register_form" action="">
                 <h2 class="form_h2">Anmelden</h2>
-                <div class="field_container" id="tab_1">Name
-                    <p><label>Anrede: </label><select>
+                <div class="field_container" id="tab_1">Kontaktinformationen
+                    <div><label>Anrede: </label><select>
                         <option>Herr</option>
                         <option>Frau</option>
-                    </select></p>
-                    <p><label>*Vorname: </label><input type="text" placeholder="Anakin" required></p>
-                    <p><label>*Nachname: </label><input type="text" placeholder="Skywalker" required></p>
+                    </select></div>
+                    <div><label>*Vorname: </label><input type="text" placeholder="Anakin" required></div>
+                    <div><label>*Nachname: </label><input type="text" placeholder="Skywalker" required></div>
+                    <div><label>*Email-Adresse: </label><input type="email" placeholder="yourmail@gmail.com" required></div>   
+                    <div><label>Telefonnummer: </label><input type="tel" placeholder="015234587686"></div>
                     <button type="submit" id="switch_to_contact_button">Weiter</button>
                 </div>
                     
-                <div class="field_container" id="tab_2">Kontaktinformationen  
-                    <p><label>*Email-Adresse: </label><input type="email" placeholder="yourmail@gmail.com" required></p>   
-                    <p><label>Telefonnummer: </label><input type="tel" placeholder="015234587686"></p>
-                    <p><label>Strasse: </label><input type="text" placeholder="Wagnerweg">
-                    <label>Hausnummer: </label><input type="number" placeholder="7"></p>
-                    <p><label>Postleitzahl: </label><input type="text" placeholder="12345">
-                    <label>Ort: </label><input type="text" placeholder="Berlin"></p>
+                <div class="field_container" id="tab_2">Anschrift  
+                    <div><label>Strasse: </label><input type="text" placeholder="Wagnerweg"></div>
+                    <div><label>Hausnummer: </label><input type="number" placeholder="7"></div>
+                    <div><label>Postleitzahl: </label><input type="text" placeholder="12345"></div>
+                    <div><label>Ort: </label><input type="text" placeholder="Berlin"></div>
                     <button type="button" id="back_to_name_button">Zurück</button>
                     <button type="submit" id="switch_to_register_button">Weiter</button>   
                 </div>
 
                 <div class="field_container" id="tab_3">Registrierung
-                    <p><label>*Benutzername: </label><input type="text" placeholder="babobeat123" required></p>
-                    <p><label>*Passwort: </label><input type="password" placeholder="starkes Passwort" pattern="[A-Za-z0-9]" required></p>
-                    <p><input type="checkbox">
-                    <label>Ich wünsche regelmäßig über Neuigkeiten per E-Mail informiert zu werden</label></p>
+                    <div><label>*Benutzername: </label><input type="text" placeholder="babobeat123" required></div>
+                    <div><label>*Passwort: </label><input type="password" placeholder="starkes Passwort" pattern="[A-Za-z0-9]" required></div>
+                    <div><input type="checkbox">
+                    <label>Ich wünsche regelmäßig über Neuigkeiten informiert zu werden</label></div>
                     <button type="button" id="back_to_contact_button">Zurück</button>
                     <button type="submit" id="finish_register_button">Registrieren</button>
                 </div>

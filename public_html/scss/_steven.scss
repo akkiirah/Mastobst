@@ -1,9 +1,14 @@
 .steven {
-    background-image: url('/public_html/img/fruit_bg.png');
+    background-image: url('/public_html/img/fruit_bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 0;
+
+    .content_container,
+    .register_form {
+        background-color: #252526AA !important;
+        backdrop-filter: blur(50px);
+    }
 }
 
 .register_form {
@@ -15,8 +20,16 @@
     margin-inline: 15rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    padding-inline: 15rem;
     background-color: $clr_main_light;
     box-shadow: 0 0 1rem 1px rgba(37,37,38,0.75); 
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
 }
 
 .form_h2 {
@@ -30,18 +43,15 @@
     padding-top: 1rem;
 }
 
-
-.field_container p,
 .field_container input,
 .field_container select {
     text-align: center;
     font-size: 25px;
-    margin-top: 15px;
     border-radius: 10px;
 }
 
 .field_container button {
     text-align: center;
     font-size: 25px;
-    margin-top: 20px;
+    margin-top: 25px;
 }

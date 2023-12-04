@@ -129,6 +129,11 @@ https://www.fruiton.de/media/pages/home/modules/obst-lieferservice/bcc9570680-16
 https://www.fruiton.de/media/pages/home/modules/obst-lieferservice/d0cec87e3c-1693828477/kostenlose-obstlieferung-80x.png
 https://www.fruiton.de/media/pages/home/modules/obst-lieferservice/fd8b93104d-1693828223/obst-bestellung-80x.png
 
+### Anmeldung ###
+https://www.pexels.com/de-de/foto/foto-des-orangenhaufens-2084239/
+https://www.pexels.com/de-de/foto/mann-im-grunen-poloshirt-stehend-746916/
+https://www.pexels.com/photo/hand-of-a-person-holding-yellow-fruit-near-clear-glass-8004095/
+https://www.pexels.com/de-de/foto/person-die-rote-und-gelbe-frucht-halt-1165502/
 
 ### banner##
 https://www.pexels.com/de-de/foto/flatlay-fotografie-von-fruchten-1334131/
