@@ -55,3 +55,58 @@
     font-size: 25px;
     margin-top: 25px;
 }
+
+.slideshowHeading {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 35px;
+    color: $clr_second;
+}
+
+.slideshowContainer {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.slideContainer {
+    flex: 0 0 25%; 
+}
+
+.customerSlide {
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.customerSlide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.customerSlide:hover img {
+    opacity: 1;
+}
+
+.slideText {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.7); 
+    padding: 5px;
+}
+
+.customerSlide:hover .slideText {
+    opacity: 1;
+}
+

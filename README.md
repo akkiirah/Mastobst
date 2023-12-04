@@ -135,6 +135,12 @@ https://www.pexels.com/de-de/foto/mann-im-grunen-poloshirt-stehend-746916/
 https://www.pexels.com/photo/hand-of-a-person-holding-yellow-fruit-near-clear-glass-8004095/
 https://www.pexels.com/de-de/foto/person-die-rote-und-gelbe-frucht-halt-1165502/
 
+### Kundenbilder ###
+https://www.pexels.com/de-de/foto/kiefernapfel-am-strand-139229/
+https://www.pexels.com/de-de/foto/teller-mit-essen-1927314/
+https://www.pexels.com/de-de/foto/lebensmittel-gesund-tisch-rustikal-4397898/
+https://www.pexels.com/de-de/foto/frau-die-scheibe-der-wassermelone-halt-1406511/
+
 ### banner##
 https://www.pexels.com/de-de/foto/flatlay-fotografie-von-fruchten-1334131/
 https://www.pexels.com/de-de/foto/fashion-person-frau-einkaufen-9811155/
