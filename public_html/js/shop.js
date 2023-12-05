@@ -116,6 +116,9 @@ function checkRemainingItems() {
     }
 }
 
+// Wird über JavaScript gemacht, da sich die Höhe des Containers
+// über CSS mit Grid zwar automatisch anpasst,
+// jedoch diese Änderung nicht über transition animierbar ist.
 function changeContainerHeight(item) {
     let gap = 16;
     let scrollbar = 12;
