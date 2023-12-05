@@ -104,31 +104,31 @@
             <form class="register_form" action="">
                 <h2 class="form_h2">Anmelden</h2>
                 <div class="field_container" id="tab_1">Kontaktinformationen
-                    <div><label>Anrede: </label><select>
+                    <div><label for="selection">Anrede: </label><select id="selection">
                         <option>Herr</option>
                         <option>Frau</option>
                     </select></div>
-                    <div><label>*Vorname: </label><input type="text" placeholder="Anakin" required></div>
-                    <div><label>*Nachname: </label><input type="text" placeholder="Skywalker" required></div>
-                    <div><label>*Email-Adresse: </label><input type="email" placeholder="yourmail@gmail.com" required></div>   
-                    <div><label>Telefonnummer: </label><input type="tel" placeholder="015234587686"></div>
+                    <div><label for="frstname">*Vorname: </label><input id="frstname" type="text" placeholder="Anakin" required></div>
+                    <div><label for="lstname">*Nachname: </label><input id="lstname" type="text" placeholder="Skywalker" required></div>
+                    <div><label for="mail">*Email-Adresse: </label><input id="mail" type="email" placeholder="yourmail@gmail.com" required></div>   
+                    <div><label for="mobile">Telefonnummer: </label><input id="mobile" type="tel" placeholder="015234587686"></div>
                     <button type="submit" id="switch_to_contact_button">Weiter</button>
                 </div>
                     
                 <div class="field_container" id="tab_2">Anschrift  
-                    <div><label>Strasse: </label><input type="text" placeholder="Wagnerweg"></div>
-                    <div><label>Hausnummer: </label><input type="number" placeholder="7"></div>
-                    <div><label>Postleitzahl: </label><input type="text" placeholder="12345"></div>
-                    <div><label>Ort: </label><input type="text" placeholder="Berlin"></div>
+                    <div><label for="str">Strasse: </label><input id="str" type="text" placeholder="Wagnerweg"></div>
+                    <div><label for="nr">Hausnummer: </label><input id="nr" type="number" placeholder="7"></div>
+                    <div><label for="plz">Postleitzahl: </label><input id="plz" type="text" placeholder="12345"></div>
+                    <div><label for="ort">Ort: </label><input id="ort" type="text" placeholder="Berlin"></div>
                     <button type="button" id="back_to_name_button">Zurück</button>
                     <button type="submit" id="switch_to_register_button">Weiter</button>   
                 </div>
 
                 <div class="field_container" id="tab_3">Registrierung
-                    <div><label>*Benutzername: </label><input type="text" placeholder="babobeat123" required></div>
-                    <div><label>*Passwort: </label><input type="password" placeholder="starkes Passwort" pattern="[A-Za-z0-9]" required></div>
-                    <div><input type="checkbox">
-                    <label>Ich wünsche regelmäßig über Neuigkeiten informiert zu werden</label></div>
+                    <div><label for="user">*Benutzername: </label><input id="user" type="text" placeholder="babobeat123" required></div>
+                    <div><label for="pw">*Passwort: </label><input id="pw" type="password" placeholder="starkes Passwort" pattern="[A-Za-z0-9]" required></div>
+                    <div><input id="checking" type="checkbox">
+                    <label for="checking">Ich wünsche regelmäßig über Neuigkeiten informiert zu werden</label></div>
                     <button type="button" id="back_to_contact_button">Zurück</button>
                     <button type="submit" id="finish_register_button">Registrieren</button>
                 </div>
