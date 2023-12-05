@@ -175,7 +175,7 @@ body {
   ::-webkit-scrollbar-thumb:hover {
     background: $clr_second_darker;
   }
-  
+
 body.about_page {
     background-color: #fff6e5;
 }
@@ -187,6 +187,7 @@ body.about_page {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
+    margin-top: 7rem;
 
 }
 
