@@ -14,7 +14,8 @@
                 border 250ms ease;
 
     box-shadow: $box_shadow-menues;
-    z-index: 1;
+    z-index: 1; 
+    
 
     .scroll & { 
         margin: 0;

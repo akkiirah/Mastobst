@@ -1,0 +1,88 @@
+
+.adelina {
+    background-image: url('/public_html/img/recipe/pexels-lumn-1028599.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode:exclusion;
+    position: relative;
+
+    .recipe_ingridiens_checkbox_title {
+        margin-top: 10px;
+        margin-bottom: 10px; 
+    }
+
+    .checkbox-label {
+        display: flex;
+        align-items: center; 
+        margin-bottom: 5px; 
+    }
+
+    .checkbox-label input[type="checkbox"] {
+        display: none; 
+    }
+
+    .custom-checkbox {
+        width: 20px; 
+        height: 20px; 
+        border-radius: 50%; 
+        border: 2px solid $clr_second; 
+        margin-right: 10px; 
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+    }
+
+    .checkbox-label input[type="checkbox"]:checked + .custom-checkbox::before {
+        content: "";
+        display: block;
+        width: 10px; 
+        height: 10px; 
+        background: $clr_second;
+        border-radius: 50%; 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: background 0.3s; 
+    }
+
+    .checkbox-label input[type="checkbox"]:hover + .custom-checkbox::before {
+        background: $clr_color; 
+    }
+
+
+    .recipe_steps {
+        margin-top: 20px;
+        margin-bottom: 20px; 
+     }
+        
+     .step_title {
+        font-weight: bold;
+        border-bottom: 1px double $clr_color-darker; 
+        padding-bottom: 5px; 
+        margin-bottom: 5px;
+      }
+        
+        
+     .ingredient-list {
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: $clr_second_dark 1px dashed;
+        padding-bottom: 5px;
+        }
+        
+     .ingredient {
+        display: inline-block;
+        margin-right: 10px;
+        color:$clr_second_dark;;
+      }
+        
+     .content_desc {
+        margin-top: 10px;
+     }
+ }
+
+
+    
+     
+    
